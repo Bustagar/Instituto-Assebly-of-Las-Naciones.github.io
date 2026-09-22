@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Middle Assembly of Las Naciones</title>
     <link rel="stylesheet" href="styles.css">
-    <!-- Iconos FontAwesome para la flecha del usuario -->
+    <!-- Iconos FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="icon" type="image/png" href="/imagenes/favicom.png">
+    <link rel="icon" type="image/png" href="imagenes/favicom.png">
 </head>
 <body>
 
@@ -22,27 +22,30 @@
                 </div>
             </div>
         </div>
-    </div>
 
-    <!-- Menú fuera de nav-left para enviarlo al lado derecho -->
-    <nav class="nav-links">
-        <a href="#" class="active">Clases</a>
-        <a href="#">Calendario</a>
-        <a href="#">Recursos</a>
-    </nav>
-</header>
+        <!-- Botón Hamburguesa -->
+        <button class="menu-toggle" id="mobile-menu-btn" aria-label="Abrir menú">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <!-- Menú de Navegación -->
+        <nav class="nav-links" id="nav-menu">
+            <a href="#" class="active">Clases</a>
+            <a href="#">Calendario</a>
+            <a href="#">Recursos</a>
+        </nav>
+    </header>
+
     <!-- Banner Principal / Hero Section -->
     <section class="hero-section">
-        <div class="hero-overlay">
-        </div>
+        <div class="hero-overlay"></div>
     </section>
 
-    <!-- Sección de Nuevos Lanzamientos (Grid de Videos) -->
+    <!-- Sección de Contenido (Grid de Videos) -->
     <main class="content-section">
         <h3 class="section-title">Más Recursos</h3>
         
         <div class="video-grid">
-            <!-- Tarjeta 1 -->
             <a href="https://www.rca.org/about/theology/creeds-and-confessions/the-apostles-creed/" target="_blank" rel="noopener noreferrer" class="video-card">
                 <img src="imagenes/credo-de-los-apostoles.png" alt="Credo de los apostoles">
                 <div class="card-overlay">
@@ -50,7 +53,6 @@
                 </div>
             </a>
 
-            <!-- Tarjeta 2 -->
             <a href="https://www.rca.org/about/theology/creeds-and-confessions/the-nicene-creed/" target="_blank" rel="noopener noreferrer" class="video-card">
                 <img src="imagenes/credo-de-nicea.jpg" alt="Credo de Nicea">
                 <div class="card-overlay">
@@ -58,7 +60,6 @@
                 </div>
             </a>
 
-            <!-- Tarjeta 3 -->
             <a href="https://www.rca.org/about/theology/creeds-and-confessions/the-athanasian-creed/" target="_blank" rel="noopener noreferrer" class="video-card">
                 <img src="imagenes/credo-de-atanasio.jpg" alt="Credo de Atanasio">
                 <div class="card-overlay">
@@ -66,7 +67,6 @@
                 </div>
             </a>
 
-            <!-- Tarjeta 4 -->
             <a href="https://www.rca.org/about/theology/creeds-and-confessions/the-heidelberg-catechism/" target="_blank" rel="noopener noreferrer" class="video-card">
                 <img src="imagenes/catesismo-de-heidelberg.jpg" alt="El Catecismo de Heidelberg">
                 <div class="card-overlay">
@@ -74,7 +74,6 @@
                 </div>
             </a>
 
-            <!-- Tarjeta 5 -->
             <a href="https://www.rca.org/about/theology/creeds-and-confessions/the-belgic-confession/" target="_blank" rel="noopener noreferrer" class="video-card">
                 <img src="imagenes/confesion-belga.jpg" alt="La Confesión Belga">
                 <div class="card-overlay">
@@ -82,7 +81,6 @@
                 </div>
             </a>
 
-            <!-- Tarjeta 6 -->
             <a href="https://www.rca.org/about/theology/creeds-and-confessions/canons-of-dort/" target="_blank" rel="noopener noreferrer" class="video-card">
                 <img src="imagenes/canones-de-dort.jpg" alt="Los Cánones de Dort">
                 <div class="card-overlay">
@@ -90,7 +88,6 @@
                 </div>
             </a>
 
-            <!-- Tarjeta 7 -->
             <a href="https://www.rca.org/about/theology/creeds-and-confessions/the-belhar-confession/" target="_blank" rel="noopener noreferrer" class="video-card">
                 <img src="imagenes/confesion-belhar.jpg" alt="La confesión Belhar">
                 <div class="card-overlay">
@@ -100,5 +97,7 @@
         </div>
     </main>
 
+    <!-- Vinculación del archivo JS externo -->
+    <script src="script.js"></script>
 </body>
 </html>
