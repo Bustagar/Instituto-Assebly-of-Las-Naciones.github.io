@@ -1,4 +1,3 @@
-/* Reseteo básico y tipografía */
 * {
     margin: 0;
     padding: 0;
@@ -14,11 +13,11 @@ body {
 /* --- Barra de Navegación --- */
 .navbar {
     display: flex;
-    justify-content: space-between; /* Mantiene logo a la izquierda y menú a la derecha */
+    justify-content: space-between;
     align-items: center;
     background-color: #181a26;
     padding: 10px 25px;
-    height: 60px;                   /* Mantiene la altura original */
+    height: 60px;
     position: sticky;
     top: 0;
     z-index: 100;
@@ -31,7 +30,6 @@ body {
     height: 100%;
 }
 
-/* Logo personalizado */
 .logo {
     display: flex;
     align-items: center;
@@ -39,9 +37,8 @@ body {
     height: 100%;
 }
 
-/* Dimensiones del logo */
 .logo-site {
-    height: 80px;                   /* Ajustado para encajar bien en 60px de navbar */
+    height: 45px;
     width: auto;
     object-fit: contain;
     display: block;
@@ -66,7 +63,17 @@ body {
     text-transform: uppercase;
 }
 
-/* Enlaces de navegación (Alineados a la derecha) */
+/* Botón Hamburguesa */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 22px;
+    cursor: pointer;
+    padding: 5px;
+}
+
 .nav-links {
     display: flex;
     align-items: center;
@@ -76,7 +83,7 @@ body {
 .nav-links a {
     color: #8c93a8;
     text-decoration: none;
-    font-size: 16px;                /* Letras de navegación un poco más grandes */
+    font-size: 16px;
     font-weight: 600;
     transition: color 0.2s;
 }
@@ -84,31 +91,6 @@ body {
 .nav-links a:hover,
 .nav-links a.active {
     color: #4a80f0;
-}
-
-/* Usuario a la derecha */
-.user-profile {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    cursor: pointer;
-}
-
-.user-name {
-    font-size: 13px;
-    color: #d1d5db;
-}
-
-.user-profile i {
-    font-size: 12px;
-    color: #8c93a8;
-}
-
-.avatar {
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    object-fit: cover;
 }
 
 /* --- Hero Banner --- */
@@ -128,25 +110,7 @@ body {
     padding-left: 35px;
 }
 
-.hero-content {
-    background-color: rgba(0, 0, 0, 0.85);
-    padding: 15px 25px;
-    max-width: 550px;
-    border-radius: 2px;
-}
-
-.hero-content h1 {
-    font-size: 22px;
-    font-weight: 700;
-    margin-bottom: 4px;
-}
-
-.hero-content h2 {
-    font-size: 20px;
-    font-weight: 700;
-}
-
-/* --- Sección de Contenido / Grilla de Videos --- */
+/* --- Grilla de Videos --- */
 .content-section {
     padding: 20px 25px 40px;
 }
@@ -164,7 +128,6 @@ body {
     gap: 18px;
 }
 
-/* Tarjetas y Enlaces de las tarjetas */
 .video-card,
 a.video-card {
     position: relative;
@@ -211,7 +174,7 @@ a.video-card img {
     line-height: 1.3;
 }
 
-/* --- Responsividad para pantallas más pequeñas --- */
+/* --- Responsividad --- */
 @media (max-width: 1024px) {
     .video-grid {
         grid-template-columns: repeat(3, 1fr);
@@ -219,12 +182,25 @@ a.video-card img {
 }
 
 @media (max-width: 768px) {
-    .video-grid {
-        grid-template-columns: repeat(2, 1fr);
+    .menu-toggle {
+        display: block;
     }
-    
-    .hero-section {
-        height: 300px;
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #181a26;
+        flex-direction: column;
+        padding: 20px 0;
+        gap: 15px;
+        box-shadow: 0 8px 12px rgba(0, 0, 0, 0.5);
+    }
+
+    .nav-links.active {
+        display: flex;
     }
 
     .brand-name {
@@ -233,6 +209,14 @@ a.video-card img {
 
     .brand-sub {
         font-size: 8px;
+    }
+
+    .video-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero-section {
+        height: 300px;
     }
 }
 
@@ -247,13 +231,5 @@ a.video-card img {
 
     .logo-site {
         height: 35px;
-    }
-
-    .nav-links {
-        gap: 10px;
-    }
-
-    .nav-links a {
-        font-size: 14px;
     }
 }
