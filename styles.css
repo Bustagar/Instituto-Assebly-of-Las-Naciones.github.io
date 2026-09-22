@@ -14,11 +14,11 @@ body {
 /* --- Barra de Navegación --- */
 .navbar {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Mantiene logo a la izquierda y menú a la derecha */
     align-items: center;
     background-color: #181a26;
     padding: 10px 25px;
-    height: 60px;
+    height: 60px;                   /* Mantiene la altura original */
     position: sticky;
     top: 0;
     z-index: 100;
@@ -36,12 +36,12 @@ body {
     display: flex;
     align-items: center;
     gap: 12px;
-    height: 100%; /* Permite al logo adaptarse al alto de la navbar */
+    height: 100%;
 }
 
-/* Clase para controlar las dimensiones del logo en base a la barra de navegación */
+/* Dimensiones del logo */
 .logo-site {
-    height: 150%;         /* Ocupa el 85% de los 75px de la navbar (~63px) */
+    height: 80px;                   /* Ajustado para encajar bien en 60px de navbar */
     width: auto;
     object-fit: contain;
     display: block;
@@ -55,28 +55,29 @@ body {
 
 .brand-name {
     font-weight: 700;
-    font-size: 15px;
+    font-size: 16px;
     letter-spacing: 0.5px;
     color: #ffffff;
 }
 
 .brand-sub {
-    font-size: 9px;
+    font-size: 10px;
     color: #9ba0b4;
     text-transform: uppercase;
 }
 
-/* Enlaces de navegación */
+/* Enlaces de navegación (Alineados a la derecha) */
 .nav-links {
     display: flex;
+    align-items: center;
     gap: 20px;
 }
 
 .nav-links a {
     color: #8c93a8;
     text-decoration: none;
-    font-size: 13px;
-    font-weight: 500;
+    font-size: 16px;                /* Letras de navegación un poco más grandes */
+    font-weight: 600;
     transition: color 0.2s;
 }
 
@@ -114,7 +115,6 @@ body {
 .hero-section {
     width: 100%;
     height: 400px;
-    /* Imagen de fondo representativa de biblioteca/estudio */
     background: url('https://images.unsplash.com/photo-1521587760476-6c12a4b040da?auto=format&fit=crop&q=80&w=1600') center/cover no-repeat;
     position: relative;
 }
@@ -246,10 +246,14 @@ a.video-card img {
     }
 
     .logo-site {
-        height: 65%; /* Reduce ligeramente el logo en celulares */
+        height: 35px;
     }
 
     .nav-links {
         gap: 10px;
+    }
+
+    .nav-links a {
+        font-size: 14px;
     }
 }
