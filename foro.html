@@ -3,67 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Middle Assembly of Las Naciones - Inicio</title>
+    <title>Foro - Middle Assembly of Las Naciones</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="icon" type="image/png" href="imagenes/favicom.png">
 </head>
 <body>
 
-    <!-- Modal de Inicio de Sesión -->
-    <div id="login-modal" class="modal-overlay">
-        <div class="modal-card">
-            <div class="modal-header">
-                <img src="imagenes/Logo.png" alt="Logo Middle Assembly" class="modal-logo">
-                <div class="modal-lang-selector">
-                    <i class="fa-solid fa-globe"></i>
-                    <select id="login-language-select">
-                        <option value="es">Español</option>
-                        <option value="en">English</option>
-                        <option value="ht">Kreyòl Ayisyen</option>
-                        <option value="ko">한국어</option>
-                        <option value="zh">繁體中文 (Hong Kong)</option>
-                        <option value="it">Italiano</option>
-                        <option value="fr">Français</option>
-                        <option value="pt">Português</option>
-                        <option value="de">Deutsch</option>
-                        <option value="ru">Русский</option>
-                        <option value="ar">العربية</option>
-                        <option value="ja">日本語</option>
-                        <option value="hi">हिन्दी</option>
-                        <option value="tr">Türkçe</option>
-                        <option value="nl">Nederlands</option>
-                    </select>
-                </div>
-            </div>
-
-            <div class="modal-body">
-                <h2 id="login-title">Iniciar Sesión</h2>
-                <p id="login-subtitle">Ingresa tus credenciales para acceder a la plataforma</p>
-
-                <form id="login-form">
-                    <div class="form-group">
-                        <label id="lbl-email" for="email"><i class="fa-solid fa-envelope"></i> Correo Electrónico</label>
-                        <input type="email" id="email" required placeholder="correo@ejemplo.com">
-                    </div>
-
-                    <div class="form-group">
-                        <label id="lbl-password" for="password"><i class="fa-solid fa-lock"></i> Contraseña</label>
-                        <input type="password" id="password" required placeholder="••••••••">
-                    </div>
-
-                    <div id="login-error" class="login-error"></div>
-
-                    <button type="submit" id="btn-login" class="btn-submit">
-                        <span id="btn-text">Ingresar</span>
-                        <i id="login-spinner" class="fa-solid fa-spinner fa-spin hidden"></i>
-                    </button>
-                </form>
-            </div>
-        </div>
-    </div>
-
-    <!-- Contenido de la Aplicación -->
     <div id="app-content" class="hidden app-wrapper">
         <header class="navbar">
             <div class="nav-left">
@@ -80,14 +26,13 @@
                 <i class="fa-solid fa-bars"></i>
             </button>
 
-            <!-- Menú en la misma pestaña -->
             <nav class="nav-links" id="nav-menu">
-                <a href="index.html" class="active" data-i18n="navHome">Inicio</a>
+                <a href="index.html" data-i18n="navHome">Inicio</a>
                 <a href="clases.html" data-i18n="navClasses">Clases</a>
                 <a href="recursos.html" data-i18n="navResources">Recursos</a>
                 <a href="calendario.html" data-i18n="navCalendar">Calendario</a>
                 <a href="tareas.html" data-i18n="navTasks">Tareas</a>
-                <a href="foro.html" data-i18n="navForum">Foro</a>
+                <a href="foro.html" class="active" data-i18n="navForum">Foro</a>
                 <a href="avisos.html" data-i18n="navNotices">Avisos</a>
                 <a href="perfil.html" data-i18n="navProfile">Mi Perfil</a>
                 <a href="soporte.html" data-i18n="navSupport">Soporte</a>
@@ -122,8 +67,8 @@
         <section class="hero-section">
             <div class="hero-overlay"></div>
             <div class="hero-content">
-                <h1 data-i18n="welcomeTitle">Bienvenido a la Plataforma Educativa</h1>
-                <p data-i18n="welcomeMsg">Explora tus materias, recursos de estudio y fechas importantes desde el menú superior.</p>
+                <h1 data-i18n="navForum">Foro</h1>
+                <p>Espacio de interacción, consultas y debates académicos entre profesores y estudiantes.</p>
             </div>
         </section>
 
