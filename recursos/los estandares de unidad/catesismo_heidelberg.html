@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catecismo de Heidelberg - Instituto Middle Assembly of Las Naciones</title>
+    <!-- FontAwesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Tu CSS global unificado -->
+    <link rel="stylesheet" href="../../styles.css">
+</head>
+<body class="page-heidelberg"> <!-- CLASE EXCLUSIVA PARA ESTA PÁGINA -->
+
+    <div class="app-wrapper heidelberg-app-wrapper">
+        
+        <!-- Navbar Superior Oficial -->
+        <nav class="navbar">
+            <div class="nav-left">
+                <div class="logo">
+                    <img src="../../imagenes/Logo.png" alt="Logo" class="logo-site">
+                    <div class="logo-text">
+                        <span class="brand-name">Instituto Middle Assembly of Las Naciones</span>
+                        <span class="brand-sub">DEPARTAMENTO DE DESARROLLO Y LIDERAZGO</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="nav-links" id="navLinks">
+                <a href="../../index.html">Inicio</a>
+                <a href="../../clases.html">Clases</a>
+                <a href="../recursos.html" class="active">Recursos</a>
+                <a href="../../calendario.html">Calendario</a>
+                <a href="../../tareas.html">Tareas</a>
+                <a href="../../foro.html">Foro</a>
+                <a href="../../avisos.html">Avisos</a>
+                <a href="../../perfil.html">Mi Perfil</a>
+                <a href="../../soporte.html">Soporte</a>
+                
+                <div class="lang-selector">
+                    <i class="fa-solid fa-globe"></i>
+                    <select id="langSelect">
+                        <option value="es" selected>Español</option>
+                        <option value="en">English</option>
+                    </select>
+                </div>
+                
+                <button class="btn-logout" onclick="window.location.href='../../login.html'">
+                    <i class="fa-solid fa-right-from-bracket"></i> Salir
+                </button>
+            </div>
+        </nav>
+
+        <!-- Contenedor Específico del Catecismo -->
+        <div class="heidelberg-layout">
+            
+            <!-- Barra lateral de navegación con scroll independiente -->
+            <aside class="heidelberg-aside">
+                <div class="heidelberg-sidebar-header">
+                    <h2>Catecismo de Heidelberg</h2>
+                </div>
+                <div class="heidelberg-search-box">
+                    <input type="text" id="searchInput" placeholder="Buscar pregunta o tema..." onkeyup="filterContent()">
+                </div>
+                <ul class="heidelberg-nav-list" id="navList">
+                    <!-- Se llena dinámicamente con JS -->
+                </ul>
+            </aside>
+
+            <!-- Área Central de Contenido -->
+            <main class="heidelberg-main">
+                <div class="heidelberg-content-card" id="mainContent">
+                    <h1>Bienvenido al Catecismo de Heidelberg</h1>
+                    <p>Selecciona un Día del Señor en el menú de la izquierda para comenzar a estudiar, o utiliza el buscador superior para encontrar una pregunta específica.</p>
+                </div>
+            </main>
+        </div>
+
+        <!-- Pie de Página Oficial -->
+        <footer class="site-footer">
+            <div class="footer-content">
+                <p>Instituto Middle Assembly of Las Naciones &copy; 2026</p>
+                <p class="footer-sub">Departamento de Desarrollo y Liderazgo</p>
+            </div>
+        </footer>
+
+    </div>
+
+    <script src="../../script.js"></script>
+</body>
+</html>

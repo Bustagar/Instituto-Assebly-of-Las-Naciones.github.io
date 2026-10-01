@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Credo Atanasiano - Middle Assembly of Las Naciones</title>
+    <!-- Subimos dos niveles con ../../ para encontrar el styles.css principal -->
+    <link rel="stylesheet" href="../../styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="../../imagenes/favicom.png">
+</head>
+<body>
+
+    <div id="app-content" class="hidden app-wrapper">
+        <!-- Navbar Superior Compartida -->
+        <header class="navbar">
+            <div class="nav-left">
+                <div class="logo">
+                    <img src="../../imagenes/Logo.png" alt="Logo Middle Assembly" class="logo-site">
+                    <div class="logo-text">
+                        <span class="brand-name" data-i18n="brandName">Instituto Middle Assembly of Las Naciones</span>
+                        <span class="brand-sub" data-i18n="brandSub">Departamento de Desarrollo y Liderazgo</span>
+                    </div>
+                </div>
+            </div>
+
+            <button class="menu-toggle" id="mobile-menu-btn" aria-label="Abrir menú">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <nav class="nav-links" id="nav-menu">
+                <a href="../../index.html" data-i18n="navHome">Inicio</a>
+                <a href="../../clases.html" data-i18n="navClasses">Clases</a>
+                <a href="../../recursos.html" class="active" data-i18n="navResources">Recursos</a>
+                <a href="../../calendario.html" data-i18n="navCalendar">Calendario</a>
+                <a href="../../tareas.html" data-i18n="navTasks">Tareas</a>
+                <a href="../../foro.html" data-i18n="navForum">Foro</a>
+                <a href="../../avisos.html" data-i18n="navNotices">Avisos</a>
+                <a href="../../perfil.html" data-i18n="navProfile">Mi Perfil</a>
+                <a href="../../soporte.html" data-i18n="navSupport">Soporte</a>
+
+                <div class="lang-selector">
+                    <i class="fa-solid fa-globe"></i>
+                    <select id="nav-language-select">
+                        <option value="es">Español</option>
+                        <option value="en">English</option>
+                        <option value="ht">Kreyòl Ayisyen</option>
+                        <option value="ko">한국어</option>
+                        <option value="zh">繁體中文 (Hong Kong)</option>
+                        <option value="it">Italiano</option>
+                        <option value="fr">Français</option>
+                        <option value="pt">Português</option>
+                        <option value="de">Deutsch</option>
+                        <option value="ru">Русский</option>
+                        <option value="ar">العربية</option>
+                        <option value="ja">日本語</option>
+                        <option value="hi">हिन्दी</option>
+                        <option value="tr">Türkçe</option>
+                        <option value="nl">Nederlands</option>
+                    </select>
+                </div>
+
+                <button id="logout-btn" class="btn-logout" title="Cerrar sesión">
+                    <i class="fa-solid fa-right-from-bracket"></i> <span data-i18n="logout">Salir</span>
+                </button>
+            </nav>
+        </header>
+
+        <!-- Contenido Principal del Recurso -->
+        <main class="recurso-detalle-main">
+            <!-- Breadcrumb -->
+            <div class="breadcrumb-container">
+                <a href="../../index.html">Inicio</a> / <a href="../../recursos.html">Recursos</a> / <span>El Credo Atanasiano</span>
+            </div>
+
+            <!-- Banner con Imagen de Cabecera y Título -->
+            <div class="recurso-hero-banner">
+                <div class="recurso-banner-overlay"></div>
+                <!-- Reemplaza esta imagen por la que prefieras usar -->
+                <img src="../../imagenes/credo-de-atanasio.jpg" alt="El Credo Atanasiano" class="recurso-banner-img">
+                <div class="recurso-banner-content">
+                    <h1>El Credo Atanasiano</h1>
+                </div>
+            </div>
+
+            <!-- Tarjeta Contenedora de Información -->
+            <div class="recurso-content-card">
+                <div class="recurso-intro-section">
+                    <p>El Credo Atanasiano recibe su nombre de Atanasio, obispo del siglo IV y destacado defensor del trinitarismo. Este credo, de origen latino, proclama creencias fundamentales sobre la Trinidad, específicamente, la igualdad de las tres personas. Es uno de los tres credos aceptados por la Iglesia Reformada en América.</p>
+                </div>
+
+                <!-- Bloque de texto para el credo atanasiano -->
+                <div class="version-box credo-completo-box">
+                    <h3><i class="fa-solid fa-cross"></i> Texto Confesional</h3>
+                    <div class="version-texto credo-parrafos">
+                        <p>Quien quiera salvarse debe, ante todo, aferrarse a la fe católica.</p>
+                        <p>Quien no la guarde íntegra e inviolable, sin duda perecerá eternamente.</p>
+                        <p>Esta es la fe católica: Adoramos a un solo Dios en la Trinidad y a la Trinidad en la unidad, sin confundir las personas ni dividir al ser divino.</p>
+                        <p>Porque el Padre es una persona, el Hijo es otra, y el Espíritu es otra más.</p>
+                        <p>Pero la divinidad del Padre, del Hijo y del Espíritu Santo es una, igual en gloria, coeterna en majestad.</p>
+                        <p>Lo que es el Padre, lo es el Hijo, y también lo es el Espíritu Santo.</p>
+                        <p>El Padre no es creado; el Hijo no es creado; el Espíritu no es creado.</p>
+                        <p>El Padre es infinito; el Hijo es infinito; el Espíritu Santo es infinito.</p>
+                        <p>Eterno es el Padre; eterno es el Hijo; eterno es el Espíritu: Y sin embargo no hay tres seres eternos, sino uno solo que es eterno; así como no hay tres seres increados e ilimitados, sino uno solo que es increado e ilimitado.</p>
+                        <p>Todopoderoso es el Padre; todopoderoso es el Hijo; todopoderoso es el Espíritu: Y sin embargo no hay tres seres todopoderosos, sino uno solo que es todopoderoso.</p>
+                        <p>Así pues, el Padre es Dios; el Hijo es Dios; el Espíritu Santo es Dios: y, sin embargo, no hay tres dioses, sino un solo Dios.</p>
+                        <p>Así pues, el Padre es Señor; el Hijo es Señor; el Espíritu Santo es Señor: y, sin embargo, no hay tres señores, sino un solo Señor.</p>
+                        <p>Así como la verdad cristiana nos obliga a reconocer a cada persona distinta como Dios y Señor, la religión católica nos prohíbe decir que hay tres dioses o señores.</p>
+                        <p>El Padre no fue hecho ni creado ni engendrado; el Hijo no fue hecho ni creado, sino que fue engendrado únicamente por el Padre; el Espíritu no fue hecho ni creado, sino que procede del Padre y del Hijo.</p>
+                        <p>Así pues, hay un solo Padre, no tres padres; un solo Hijo, no tres hijos; un solo Espíritu Santo, no tres espíritus.</p>
+                        <p>Y en esta Trinidad, nadie está antes ni después, mayor ni menor que el otro; sino que las tres personas son en sí mismas coeternas y coiguales; y por eso debemos adorar a la Trinidad en unidad y al único Dios en tres personas.</p>
+                        <p>Quien quiera salvarse debería pensar así acerca de la Trinidad.</p>
+                        <p>Para la salvación eterna es necesario creer fielmente que nuestro Señor Jesucristo se hizo carne.</p>
+                        <p>Porque esta es la verdadera fe que creemos y confesamos: que nuestro Señor Jesucristo, el Hijo de Dios, es Dios y hombre.</p>
+                        <p>Él es Dios, engendrado antes de todos los mundos del ser del Padre, y es hombre, nacido en el mundo del ser de su madre; existe plenamente como Dios y plenamente como hombre con alma racional y cuerpo humano; igual al Padre en divinidad, subordinado al Padre en humanidad.</p>
+                        <p>Aunque es Dios y hombre, no está dividido, sino que es un solo Cristo.</p>
+                        <p>Él está unido porque Dios ha tomado a la humanidad en sí mismo; no transforma la divinidad en humanidad.</p>
+                        <p>Él es completamente uno en la unidad de su persona, sin confundir sus naturalezas.</p>
+                        <p>Porque así como el alma racional y el cuerpo son una sola persona, así también Cristo es Dios y hombre.</p>
+                        <p>Sufrió la muerte por nuestra salvación. Descendió a los infiernos y resucitó de entre los muertos.</p>
+                        <p>Ascendió al cielo y está sentado a la derecha del Padre.</p>
+                        <p>Él volverá para juzgar a los vivos y a los muertos.</p>
+                        <p>A su llegada, todos los hombres se levantarán en cuerpo y alma para dar cuenta de sus actos.</p>
+                        <p>Quienes hayan hecho el bien entrarán en la vida eterna, quienes hayan hecho el mal entrarán en el fuego eterno.</p>
+                        <p>Esta es la fe católica.</p>
+                        <p>Uno no puede salvarse sin creer esto con firmeza y fidelidad.</p>
+                    </div>
+                </div>
+
+                <div class="recurso-back-action" style="margin-top: 30px;">
+                    <a href="../../recursos.html" class="btn-volver-recursos">
+                        <i class="fa-solid fa-arrow-left"></i> Volver a Recursos
+                    </a>
+                </div>
+            </div>
+        </main>
+
+        <footer class="site-footer">
+            <div class="footer-content">
+                <p>&copy; 2026 Instituto Middle Assembly of Las Naciones. Todos los derechos reservados.</p>
+                <p class="footer-sub">Departamento de Desarrollo y Liderazgo</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="../../script.js"></script>
+</body>
+</html>

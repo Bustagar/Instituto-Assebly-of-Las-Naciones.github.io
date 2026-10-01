@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Credo Niceno - Middle Assembly of Las Naciones</title>
+    <!-- Subimos dos niveles con ../../ para encontrar el styles.css principal -->
+    <link rel="stylesheet" href="../../styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="../../imagenes/favicom.png">
+</head>
+<body>
+
+    <div id="app-content" class="hidden app-wrapper">
+        <!-- Navbar Superior Compartida -->
+        <header class="navbar">
+            <div class="nav-left">
+                <div class="logo">
+                    <img src="../../imagenes/Logo.png" alt="Logo Middle Assembly" class="logo-site">
+                    <div class="logo-text">
+                        <span class="brand-name" data-i18n="brandName">Instituto Middle Assembly of Las Naciones</span>
+                        <span class="brand-sub" data-i18n="brandSub">Departamento de Desarrollo y Liderazgo</span>
+                    </div>
+                </div>
+            </div>
+
+            <button class="menu-toggle" id="mobile-menu-btn" aria-label="Abrir menú">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <nav class="nav-links" id="nav-menu">
+                <a href="../../index.html" data-i18n="navHome">Inicio</a>
+                <a href="../../clases.html" data-i18n="navClasses">Clases</a>
+                <a href="../../recursos.html" class="active" data-i18n="navResources">Recursos</a>
+                <a href="../../calendario.html" data-i18n="navCalendar">Calendario</a>
+                <a href="../../tareas.html" data-i18n="navTasks">Tareas</a>
+                <a href="../../foro.html" data-i18n="navForum">Foro</a>
+                <a href="../../avisos.html" data-i18n="navNotices">Avisos</a>
+                <a href="../../perfil.html" data-i18n="navProfile">Mi Perfil</a>
+                <a href="../../soporte.html" data-i18n="navSupport">Soporte</a>
+
+                <div class="lang-selector">
+                    <i class="fa-solid fa-globe"></i>
+                    <select id="nav-language-select">
+                        <option value="es">Español</option>
+                        <option value="en">English</option>
+                        <option value="ht">Kreyòl Ayisyen</option>
+                        <option value="ko">한국어</option>
+                        <option value="zh">繁體中文 (Hong Kong)</option>
+                        <option value="it">Italiano</option>
+                        <option value="fr">Français</option>
+                        <option value="pt">Português</option>
+                        <option value="de">Deutsch</option>
+                        <option value="ru">Русский</option>
+                        <option value="ar">العربية</option>
+                        <option value="ja">日本語</option>
+                        <option value="hi">हिन्दी</option>
+                        <option value="tr">Türkçe</option>
+                        <option value="nl">Nederlands</option>
+                    </select>
+                </div>
+
+                <button id="logout-btn" class="btn-logout" title="Cerrar sesión">
+                    <i class="fa-solid fa-right-from-bracket"></i> <span data-i18n="logout">Salir</span>
+                </button>
+            </nav>
+        </header>
+
+        <!-- Contenido Principal del Recurso -->
+        <main class="recurso-detalle-main">
+            <!-- Breadcrumb -->
+            <div class="breadcrumb-container">
+                <a href="../../index.html">Inicio</a> / <a href="../../recursos.html">Recursos</a> / <span>El Credo Niceno</span>
+            </div>
+
+            <!-- Banner con Imagen de Cabecera y Título -->
+            <div class="recurso-hero-banner">
+                <div class="recurso-banner-overlay"></div>
+                <!-- Reemplaza esta imagen por la que prefieras usar -->
+                <img src="../../imagenes/credo-de-nicea.jpg" alt="El Credo Niceno" class="recurso-banner-img">
+                <div class="recurso-banner-content">
+                    <h1>El Credo Niceno</h1>
+                </div>
+            </div>
+
+            <!-- Tarjeta Contenedora de Información -->
+            <div class="recurso-content-card">
+                <div class="recurso-intro-section">
+                    <p>El Credo Niceno surgió del Concilio de Nicea en el año 325 d. C. Este credo enfatiza la doctrina de la Trinidad en respuesta a las enseñanzas de Arrio, un clérigo que negaba la divinidad del Hijo, la segunda persona de la Trinidad. Esta declaración de fe ortodoxa es utilizada por muchas denominaciones, incluida la RCA.</p>
+                </div>
+
+                <!-- Bloque único o sección de texto para el credo completo -->
+                <div class="version-box credo-completo-box">
+                    <h3><i class="fa-solid fa-book-bible"></i> Texto Confesional</h3>
+                    <div class="version-texto">
+                        <pre class="credo-versificado">
+                    Creemos en un solo Dios,
+
+                        el Padre, el Todopoderoso,
+                        creador del cielo y de la tierra,
+                        de todo lo que es, visible e invisible.
+
+                    Creemos en un solo Señor, Jesucristo,
+                    
+                        Hijo único de Dios,
+                        engendrado del Padre antes de todos los siglos,
+                        Dios de Dios, Luz de Luz,
+                        Dios verdadero de Dios verdadero,
+                        engendrado, no creado,
+                        de la misma naturaleza que el Padre;
+                        por quien todo fue hecho.
+                        Por nosotros y por nuestra salvación
+                        descendió del cielo,
+                        se encarnó por obra del Espíritu Santo y de la Virgen María,
+                        y se hizo hombre.
+                        Por nuestra causa fue crucificado bajo el poder de Poncio Pilato;
+                        padeció y fue sepultado.
+                        Al tercer día resucitó,
+                        según las Escrituras;
+                        subió al cielo
+                        y está sentado a la derecha del Padre.
+                        De nuevo vendrá con gloria para juzgar a vivos y muertos,
+                        y su reino no tendrá fin.
+
+                    Creemos en el Espíritu Santo, el Señor, el dador de vida,
+
+                        quien procede del Padre [y del Hijo],
+                        quien con el Padre y el Hijo recibe la misma adoración y gloria,
+                        quien habló por medio de los profetas.
+                        Creemos en una sola Iglesia santa, católica y apostólica.
+                        Reconocemos un solo bautismo para el perdón de los pecados.
+                        Esperamos la resurrección de los muertos
+                        y la vida del mundo venidero. Amén.
+                        </pre>
+                    </div>
+                </div>
+
+                <div class="recurso-back-action" style="margin-top: 30px;">
+                    <a href="../../recursos.html" class="btn-volver-recursos">
+                        <i class="fa-solid fa-arrow-left"></i> Volver a Recursos
+                    </a>
+                </div>
+            </div>
+        </main>
+
+        <footer class="site-footer">
+            <div class="footer-content">
+                <p>&copy; 2026 Instituto Middle Assembly of Las Naciones. Todos los derechos reservados.</p>
+                <p class="footer-sub">Departamento de Desarrollo y Liderazgo</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="../../script.js"></script>
+</body>
+</html>

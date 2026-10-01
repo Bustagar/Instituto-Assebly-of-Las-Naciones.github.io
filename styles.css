@@ -5,11 +5,21 @@
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
 
-html, body {
+html {
     background-color: #181a26;
     color: #ffffff;
-    height: 100vh;
-    overflow: hidden;
+    overflow-x: hidden !important;
+    width: 100%;
+}
+
+body {
+    background-color: #181a26;
+    color: #ffffff;
+    min-height: 100vh;
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+    width: 100%;
+    position: relative;
 }
 
 .hidden {
@@ -19,9 +29,11 @@ html, body {
 .app-wrapper {
     display: flex;
     flex-direction: column;
-    height: 100vh;
-    width: 100vw;
+    min-height: 100vh;
+    width: 100%;
+    max-width: 100%;
     position: relative;
+    overflow-x: hidden;
 }
 
 select option {
@@ -44,6 +56,34 @@ select option {
     z-index: 1000;
 }
 
+.modal-lang-selector-top {
+    position: absolute;
+    top: 25px;
+    right: 30px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: #252836;
+    padding: 8px 14px;
+    border-radius: 6px;
+    border: 1px solid #2d3248;
+    z-index: 1001;
+}
+
+.modal-lang-selector-top i {
+    color: #8c93a8;
+    font-size: 15px;
+}
+
+.modal-lang-selector-top select {
+    background: transparent;
+    color: #ffffff;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    cursor: pointer;
+}
+
 .modal-card {
     background: #181a26;
     padding: 35px;
@@ -56,38 +96,14 @@ select option {
 
 .modal-header {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     margin-bottom: 25px;
 }
 
 .modal-logo {
-    height: 60px;
+    height: 150px;
     object-fit: contain;
-}
-
-.modal-lang-selector {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    background: #252836;
-    padding: 6px 10px;
-    border-radius: 4px;
-    border: 1px solid #2d3248;
-}
-
-.modal-lang-selector i {
-    color: #8c93a8;
-    font-size: 14px;
-}
-
-.modal-lang-selector select {
-    background: transparent;
-    color: #ffffff;
-    border: none;
-    outline: none;
-    font-size: 13px;
-    cursor: pointer;
 }
 
 .modal-body h2 {
@@ -167,7 +183,7 @@ select option {
     display: block;
 }
 
-/* --- Navbar --- */
+/* --- Navbar Superior --- */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -178,6 +194,8 @@ select option {
     position: sticky;
     top: 0;
     z-index: 100;
+    border-bottom: 1px solid #2d3248;
+    width: 100%;
 }
 
 .nav-left {
@@ -195,7 +213,7 @@ select option {
 }
 
 .logo-site {
-    height: 45px;
+    height: 40px;
     width: auto;
     object-fit: contain;
     display: block;
@@ -209,7 +227,7 @@ select option {
 
 .brand-name {
     font-weight: 700;
-    font-size: 16px;
+    font-size: 15px;
     letter-spacing: 0.5px;
     color: #ffffff;
 }
@@ -294,17 +312,18 @@ select option {
     color: #ffffff;
 }
 
-/* --- Hero Section (Centrado Perfecto) --- */
+/* --- Hero Section & Fondos Unificados --- */
 .hero-section {
     position: relative;
     width: 100%;
-    height: calc(100vh - 110px);
+    min-height: calc(100vh - 110px);
     background: url('https://images.unsplash.com/photo-1521587760476-6c12a4b040da?auto=format&fit=crop&q=80&w=1600') center/cover no-repeat;
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
     justify-content: center !important;
-    overflow-y: auto;
+    padding: 40px 20px;
+    overflow-x: hidden;
 }
 
 .hero-overlay {
@@ -313,7 +332,7 @@ select option {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(15, 23, 42, 0.75);
+    background: rgba(15, 23, 42, 0.82);
     z-index: 1;
 }
 
@@ -322,7 +341,7 @@ select option {
     z-index: 2;
     text-align: center;
     padding: 20px;
-    max-width: 1000px;
+    max-width: 900px;
     width: 100%;
 }
 
@@ -330,63 +349,248 @@ select option {
     font-size: 2.8rem;
     font-weight: 700;
     color: #ffffff;
-    margin-bottom: 12px;
-    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+    margin-bottom: 16px;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
 }
 
 .hero-content p {
-    font-size: 1.15rem;
+    font-size: 1.25rem;
     color: #e2e8f0;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
-    margin-bottom: 20px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
 }
 
-/* --- Estilos para la Grilla de Láminas en Recursos --- */
+/* --- Recursos y Calendario Adaptados al Hero --- */
+.recursos-hero {
+    justify-content: flex-start !important;
+}
+
+.recursos-container-inner {
+    max-width: 1100px !important;
+    margin: 20px auto;
+    text-align: left !important;
+    width: 100% !important;
+}
+
+.recursos-header {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.recursos-header h3 {
+    font-size: 0.95rem;
+    color: #4a80f0;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 8px;
+}
+
+.recursos-header h1 {
+    font-size: 2.3rem;
+    color: #ffffff;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.recursos-header p {
+    color: #cbd5e1;
+    font-size: 1.05rem;
+    margin-bottom: 0;
+}
+
+/* --- Agrupaciones de Recursos --- */
+.recursos-section-group {
+    margin-bottom: 35px;
+    width: 100%;
+}
+
+.section-category-title {
+    font-size: 1.25rem;
+    color: #ffffff;
+    margin-bottom: 15px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.section-category-title i {
+    color: #4a80f0;
+    font-size: 1rem;
+}
+
+/* --- Tarjetas de Láminas (Recursos) - Más oscuras --- */
 .laminas-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 16px;
-    margin-top: 15px;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
     width: 100%;
 }
 
 .lamina-card {
-    background: rgba(24, 26, 38, 0.85);
-    border: 1px solid #2d3248;
-    border-radius: 8px;
-    padding: 15px;
+    background: rgba(18, 21, 31, 0.94);
+    border: 1px solid #232738;
+    border-radius: 12px;
+    padding: 18px 20px;
     display: flex;
-    flex-direction: column;
     align-items: center;
+    gap: 15px;
     text-decoration: none;
-    transition: transform 0.2s, border-color 0.2s, background 0.2s;
-    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
 }
 
 .lamina-card:hover {
     transform: translateY(-4px);
     border-color: #4a80f0;
-    background: rgba(37, 40, 54, 0.95);
+    background: rgba(24, 28, 41, 0.98);
 }
 
 .lamina-icon {
-    font-size: 32px;
+    font-size: 22px;
     color: #4a80f0;
-    margin-bottom: 10px;
+    flex-shrink: 0;
 }
 
 .lamina-card span {
+    flex-grow: 1;
+    font-size: 0.98rem;
     color: #ffffff;
-    font-size: 14px;
-    font-weight: 600;
+    font-weight: 500;
+}
+
+.lamina-arrow {
+    color: #727891;
+    font-size: 13px;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.lamina-card:hover .lamina-arrow {
+    color: #4a80f0;
+    transform: translate(2px, -2px);
+}
+
+/* --- Cronograma y Calendario --- */
+.cronograma-header {
     text-align: center;
+    margin-bottom: 35px;
+}
+
+.cronograma-header h3 {
+    font-size: 0.95rem;
+    color: #4a80f0;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 8px;
+}
+
+.cronograma-header h1 {
+    font-size: 2.3rem;
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.cronograma-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+    text-align: left;
+    width: 100%;
+}
+
+/* --- Tarjetas de Clases (Calendario) - Más oscuras --- */
+.clase-card {
+    background: rgba(18, 21, 31, 0.94);
+    border: 1px solid #232738;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.clase-card:hover {
+    transform: translateY(-4px);
+    border-color: #4a80f0;
+}
+
+.clase-card-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.clase-icon {
+    font-size: 28px;
+    color: #4a80f0;
+    margin-top: 4px;
+}
+
+.clase-info {
+    width: 100%;
+}
+
+.clase-info h2 {
+    font-size: 1.25rem;
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+.fechas-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 0;
+}
+
+.fecha-link {
+    font-size: 0.92rem;
+    color: #9ba0b4;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-decoration: none;
+    padding: 6px 10px;
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 6px;
+    border: 1px solid transparent;
+    transition: all 0.2s ease;
+}
+
+.fecha-link:hover {
+    color: #ffffff;
+    background: rgba(74, 128, 240, 0.08);
+    border-color: rgba(74, 128, 240, 0.3);
+}
+
+.fecha-link i {
+    color: #4a80f0;
+    font-size: 16px;
+    transition: transform 0.2s ease;
+}
+
+.fecha-link:hover i {
+    transform: scale(1.15);
+}
+
+/* --- Texto guía inferior forzado a tamaño pequeño --- */
+.calendar-instruction {
+    font-size: 0.75rem !important;
+    color: #8c93a8 !important;
+    text-align: center !important;
+    margin-top: 15px !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+    padding-top: 10px !important;
+    line-height: 1.2 !important;
 }
 
 /* --- Pie de Página --- */
 .site-footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
+    position: relative !important;
+    margin-top: auto;
     width: 100%;
     height: 50px;
     background-color: #11131c;
@@ -443,8 +647,363 @@ select option {
     .hero-content p {
         font-size: 0.95rem;
     }
+}
+/* --- Estilos para el Logo Grande del Hero en el Index --- */
+.hero-logo-link {
+    display: inline-block;
+    margin-bottom: 20px;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
 
-    .laminas-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
+.hero-logo-link:hover {
+    transform: scale(1.05);
+    opacity: 0.95;
+}
+
+.hero-logo-main {
+    height: 200px; /* Tamaño grande y destacado */
+    width: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.5));
+}
+
+/* --- Botón de Enlace a la Página Oficial --- */
+.official-site-banner {
+    margin-top: 25px;
+}
+
+.btn-official-site {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(74, 128, 240, 0.15);
+    color: #ffffff;
+    border: 1px solid #4a80f0;
+    padding: 10px 22px;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    text-decoration: none;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: all 0.2s ease;
+}
+
+.btn-official-site:hover {
+    background: #4a80f0;
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(74, 128, 240, 0.4);
+}
+
+.btn-official-site i {
+    font-size: 1rem;
+    color: #4a80f0;
+    transition: color 0.2s ease;
+}
+
+.btn-official-site:hover i {
+    color: #ffffff;
+}
+/* --- Estilos para la Página de Detalle de Recursos --- */
+.recurso-detalle-main {
+    position: relative;
+    z-index: 2;
+    max-width: 1100px;
+    width: 92%;
+    margin: 30px auto 60px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Breadcrumb / Ruta de navegación */
+.breadcrumb-container {
+    font-size: 0.85rem;
+    color: #8c93a8;
+}
+
+.breadcrumb-container a {
+    color: #4a80f0;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.breadcrumb-container a:hover {
+    text-decoration: underline;
+}
+
+.breadcrumb-container span {
+    color: #ffffff;
+}
+
+/* Banner Superior del Recurso */
+.recurso-hero-banner {
+    position: relative;
+    width: 100%;
+    height: 240px;
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+    border: 1px solid #2d3248;
+}
+
+.recurso-banner-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.recurso-banner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(15, 23, 42, 0.75);
+    z-index: 1;
+}
+
+.recurso-banner-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 20px;
+}
+
+.recurso-banner-content h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+/* Tarjeta Contenedora Principal de Texto */
+.recurso-content-card {
+    background: rgba(18, 21, 31, 0.95);
+    border: 1px solid #2d3248;
+    border-radius: 12px;
+    padding: 35px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.recurso-intro-section p {
+    font-size: 1.05rem;
+    color: #cbd5e1;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    text-align: justify;
+    border-left: 4px solid #4a80f0;
+    padding-left: 15px;
+}
+
+/* Cuadrícula de Versiones */
+.versiones-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 25px;
+    margin-bottom: 25px;
+}
+
+.version-box {
+    background: rgba(25, 30, 44, 0.9);
+    border: 1px solid #2d3248;
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.version-box h3 {
+    font-size: 1.15rem;
+    color: #4a80f0;
+    margin-bottom: 18px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 10px;
+}
+
+/* --- Ajuste equilibrado para los textos de los credos --- */
+.version-texto p {
+    margin-bottom: 1rem;
+    text-align: left;
+    font-size: 0.95rem;
+    color: #e2e8f0;
+    line-height: 1.6; /* Altura de línea natural y legible */
+    white-space: pre-line;
+}
+
+/* Espaciado controlado entre cada frase o salto hecho con <br> */
+.version-texto p br {
+    display: block;
+    content: "";
+    margin-bottom: 8px !important; /* Espacio exacto y limpio entre líneas */
+}
+
+/* Nota al pie */
+.recurso-footnote {
+    font-size: 0.85rem;
+    color: #8c93a8;
+    font-style: italic;
+    margin-top: 20px;
+    margin-bottom: 35px;
+    padding-top: 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Botón de Retorno */
+.recurso-back-action {
+    text-align: left;
+}
+
+.btn-volver-recursos {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #252836;
+    color: #ffffff;
+    border: 1px solid #2d3248;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 0.92rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.btn-volver-recursos:hover {
+    background: #4a80f0;
+    border-color: #4a80f0;
+    transform: translateY(-2px);
+}
+.credo-versificado {
+    font-family: inherit; /* Hereda la misma fuente de tu página */
+    font-size: 0.95rem;
+    color: #e2e8f0;
+    line-height: 1.6;
+    white-space: pre-wrap; /* Permite que el texto baje de línea si la pantalla es muy pequeña */
+    background: transparent; /* Sin fondos raros */
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+.credo-versificado-resp {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+.credo-parrafos p {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+    text-align: left;
+}
+/* --- ESTILOS EXCLUSIVOS PARA LA PÁGINA DEL CATECISMOS DE HEIDELBERG --- */
+body.page-heidelberg {
+    height: 100vh;
+    overflow: hidden !important;
+    margin: 0;
+    padding: 0;
+}
+
+body.page-heidelberg .app-wrapper.heidelberg-app-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+body.page-heidelberg .heidelberg-layout {
+    display: flex;
+    flex: 1;
+    width: 100%;
+    height: calc(100vh - 60px); /* Resta la altura del navbar */
+    overflow: hidden;
+}
+
+body.page-heidelberg .heidelberg-aside {
+    width: 320px;
+    background-color: #181a26;
+    border-right: 1px solid #2d3248;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+body.page-heidelberg .heidelberg-sidebar-header {
+    padding: 20px;
+    background-color: #11131c;
+    border-bottom: 1px solid #2d3248;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+body.page-heidelberg .heidelberg-sidebar-header h2 {
+    font-size: 1.1rem;
+    color: #ffffff;
+    margin: 0;
+}
+
+body.page-heidelberg .heidelberg-search-box {
+    padding: 15px;
+    background: #181a26;
+    flex-shrink: 0;
+}
+
+body.page-heidelberg .heidelberg-search-box input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #2d3248;
+    background: #252836;
+    color: white;
+    outline: none;
+    font-size: 0.9rem;
+    box-sizing: border-box;
+}
+
+/* Lista lateral con scroll vertical independiente */
+body.page-heidelberg .heidelberg-nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex: 1;
+    overflow-y: auto; /* Aquí habilitas el scroll exclusivamente para la lista */
+    width: 100%;
+}
+
+body.page-heidelberg .heidelberg-nav-item {
+    padding: 14px 20px;
+    font-size: 0.92rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+    cursor: pointer;
+    color: #cbd5e1;
+    display: block;
+    transition: all 0.2s ease;
+}
+
+body.page-heidelberg .heidelberg-nav-item:hover {
+    background: rgba(74, 128, 240, 0.1);
+    color: #ffffff;
+}
+
+body.page-heidelberg .heidelberg-nav-item.active {
+    background: #4a80f0;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+body.page-heidelberg .heidelberg-main {
+    flex: 1;
+    padding: 30px 40px;
+    overflow-y: auto; /* Scroll independiente para el contenido del texto principal */
+    background-color: #181a26;
+    height: 100%;
 }

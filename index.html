@@ -12,29 +12,33 @@
 
     <!-- Modal de Inicio de Sesión -->
     <div id="login-modal" class="modal-overlay">
+        
+        <!-- Selector de idioma ubicado en la esquina superior derecha de la pantalla -->
+        <div class="modal-lang-selector-top">
+            <i class="fa-solid fa-globe"></i>
+            <select id="login-language-select">
+                <option value="es">Español</option>
+                <option value="en">English</option>
+                <option value="ht">Kreyòl Ayisyen</option>
+                <option value="ko">한국어</option>
+                <option value="zh">繁體中文 (Hong Kong)</option>
+                <option value="it">Italiano</option>
+                <option value="fr">Français</option>
+                <option value="pt">Português</option>
+                <option value="de">Deutsch</option>
+                <option value="ru">Русский</option>
+                <option value="ar">العربية</option>
+                <option value="ja">日本語</option>
+                <option value="hi">हिन्दी</option>
+                <option value="tr">Türkçe</option>
+                <option value="nl">Nederlands</option>
+            </select>
+        </div>
+
+        <!-- Cuadro del Login -->
         <div class="modal-card">
             <div class="modal-header">
                 <img src="imagenes/Logo.png" alt="Logo Middle Assembly" class="modal-logo">
-                <div class="modal-lang-selector">
-                    <i class="fa-solid fa-globe"></i>
-                    <select id="login-language-select">
-                        <option value="es">Español</option>
-                        <option value="en">English</option>
-                        <option value="ht">Kreyòl Ayisyen</option>
-                        <option value="ko">한국어</option>
-                        <option value="zh">繁體中文 (Hong Kong)</option>
-                        <option value="it">Italiano</option>
-                        <option value="fr">Français</option>
-                        <option value="pt">Português</option>
-                        <option value="de">Deutsch</option>
-                        <option value="ru">Русский</option>
-                        <option value="ar">العربية</option>
-                        <option value="ja">日本語</option>
-                        <option value="hi">हिन्दी</option>
-                        <option value="tr">Türkçe</option>
-                        <option value="nl">Nederlands</option>
-                    </select>
-                </div>
             </div>
 
             <div class="modal-body">
@@ -80,7 +84,6 @@
                 <i class="fa-solid fa-bars"></i>
             </button>
 
-            <!-- Menú en la misma pestaña -->
             <nav class="nav-links" id="nav-menu">
                 <a href="index.html" class="active" data-i18n="navHome">Inicio</a>
                 <a href="clases.html" data-i18n="navClasses">Clases</a>
@@ -119,13 +122,26 @@
             </nav>
         </header>
 
-        <section class="hero-section">
+        <!-- Hero Section con el Logo Grande Enlazado y Mensaje Institucional -->
+        <main class="hero-section">
             <div class="hero-overlay"></div>
             <div class="hero-content">
+                <!-- Logotipo grande enlazado a la página oficial -->
+                <a href="https://classisdelasnaciones.org/" target="_blank" rel="noopener noreferrer" class="hero-logo-link" title="Visita nuestra página oficial">
+                    <img src="imagenes/Logo.png" alt="Logo Oficial Classis de las Naciones" class="hero-logo-main">
+                </a>
+
                 <h1 data-i18n="welcomeTitle">Bienvenido a la Plataforma Educativa</h1>
                 <p data-i18n="welcomeMsg">Explora tus materias, recursos de estudio y fechas importantes desde el menú superior.</p>
+                
+                <!-- Botón / Mensaje interactivo hacia la web oficial -->
+                <div class="official-site-banner">
+                    <a href="https://classisdelasnaciones.org/" target="_blank" rel="noopener noreferrer" class="btn-official-site">
+                        <i class="fa-solid fa-globe"></i> Visita nuestra página oficial
+                    </a>
+                </div>
             </div>
-        </section>
+        </main>
 
         <footer class="site-footer">
             <div class="footer-content">

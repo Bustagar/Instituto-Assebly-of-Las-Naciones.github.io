@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Credo de los Apóstoles - Middle Assembly of Las Naciones</title>
+    <!-- Subimos dos niveles con ../../ para encontrar el styles.css principal -->
+    <link rel="stylesheet" href="../../styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="../../imagenes/favicom.png">
+</head>
+<body>
+
+    <div id="app-content" class="hidden app-wrapper">
+        <!-- Navbar Superior Compartida -->
+        <header class="navbar">
+            <div class="nav-left">
+                <div class="logo">
+                    <img src="../../imagenes/Logo.png" alt="Logo Middle Assembly" class="logo-site">
+                    <div class="logo-text">
+                        <span class="brand-name" data-i18n="brandName">Instituto Middle Assembly of Las Naciones</span>
+                        <span class="brand-sub" data-i18n="brandSub">Departamento de Desarrollo y Liderazgo</span>
+                    </div>
+                </div>
+            </div>
+
+            <button class="menu-toggle" id="mobile-menu-btn" aria-label="Abrir menú">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <nav class="nav-links" id="nav-menu">
+                <a href="../../index.html" data-i18n="navHome">Inicio</a>
+                <a href="../../clases.html" data-i18n="navClasses">Clases</a>
+                <a href="../../recursos.html" class="active" data-i18n="navResources">Recursos</a>
+                <a href="../../calendario.html" data-i18n="navCalendar">Calendario</a>
+                <a href="../../tareas.html" data-i18n="navTasks">Tareas</a>
+                <a href="../../foro.html" data-i18n="navForum">Foro</a>
+                <a href="../../avisos.html" data-i18n="navNotices">Avisos</a>
+                <a href="../../perfil.html" data-i18n="navProfile">Mi Perfil</a>
+                <a href="../../soporte.html" data-i18n="navSupport">Soporte</a>
+
+                <div class="lang-selector">
+                    <i class="fa-solid fa-globe"></i>
+                    <select id="nav-language-select">
+                        <option value="es">Español</option>
+                        <option value="en">English</option>
+                        <option value="ht">Kreyòl Ayisyen</option>
+                        <option value="ko">한국어</option>
+                        <option value="zh">繁體中文 (Hong Kong)</option>
+                        <option value="it">Italiano</option>
+                        <option value="fr">Français</option>
+                        <option value="pt">Português</option>
+                        <option value="de">Deutsch</option>
+                        <option value="ru">Русский</option>
+                        <option value="ar">العربية</option>
+                        <option value="ja">日本語</option>
+                        <option value="hi">हिन्दी</option>
+                        <option value="tr">Türkçe</option>
+                        <option value="nl">Nederlands</option>
+                    </select>
+                </div>
+
+                <button id="logout-btn" class="btn-logout" title="Cerrar sesión">
+                    <i class="fa-solid fa-right-from-bracket"></i> <span data-i18n="logout">Salir</span>
+                </button>
+            </nav>
+        </header>
+
+        <!-- Contenido Principal del Recurso -->
+        <main class="recurso-detalle-main">
+            <!-- Breadcrumb -->
+            <div class="breadcrumb-container">
+                <a href="../../index.html">Inicio</a> / <a href="../../recursos.html">Recursos</a> / <span>El Credo de los Apóstoles</span>
+            </div>
+
+            <!-- Banner con Imagen de Cabecera y Título -->
+            <div class="recurso-hero-banner">
+                <div class="recurso-banner-overlay"></div>
+                <img src="../../imagenes/credo-de-los-apostoles.png" alt="El Credo de los Apóstoles" class="recurso-banner-img">
+                <div class="recurso-banner-content">
+                    <h1>El Credo de los Apóstoles</h1>
+                </div>
+            </div>
+
+            <!-- Tarjeta Contenedora de Información -->
+            <div class="recurso-content-card">
+                <div class="recurso-intro-section">
+                    <p>Escrito unos 300 años después del nacimiento de Cristo, el Credo de los Apóstoles resume las creencias cristianas fundamentales. Ha sido utilizado tanto como declaración de fe como en el culto por muchas denominaciones, incluida la RCA.</p>
+                </div>
+
+                <div class="versiones-grid">
+                    <!-- Versión Tradicional -->
+                    <div class="version-box">
+                        <h3><i class="fa-solid fa-scroll"></i> Versión tradicional</h3>
+                        <div class="version-texto">
+                            <p>Creo en Dios, Padre todopoderoso,</p>
+                            <p></p>Creador del cielo y de la tierra;</p>
+                            <p>Y en Jesucristo, su único Hijo, nuestro Señor,</p>
+                            <p>que fue concebido por obra del Espíritu Santo,</p>
+                            <p>nació de la Virgen María,</p>
+                            <p>padeció bajo el poder de Poncio Pilato,</p>
+                            <p>fué crucificado, muerto y sepultado.</p>
+                            <p>Descendió a los infiernos.</p>
+                            <p>Al tercer día resucitó de entre los muertos.</p>
+                            <p>Subió a los cielos</p>
+                            <p>y está sentado a la derecha de Dios Padre Todopoderoso.</p>
+                            <p></p>Desde allí vendrá a juzgar a vivos y muertos.</p>
+                            <p>Creo en el Espíritu Santo,</p>
+                            <p>la santa Iglesia católica,</p>
+                            <p>la comunión de los santos,</p>
+                            <p>el perdón de los pecados,</p>
+                            <p>la resurrección de la carne</p>
+                            <p>y la vida eterna. Amén.</p>
+                        </div>
+                    </div>
+
+                    <!-- Versión Contemporánea -->
+                    <div class="version-box">
+                        <h3><i class="fa-solid fa-book-open"></i> Versión contemporánea</h3>
+                        <div class="version-texto">
+                            <p>Creo en Dios, Padre todopoderoso,</p>
+                            <p></p>creador del cielo y de la tierra.</p>
+                            <p>Creo en Jesucristo, su único Hijo, nuestro Señor.</p>
+                            <p>Fue concebido por obra del Espíritu Santo</p>
+                            <p>y nació de la Virgen María.</p>
+                            <p>Padeció bajo el poder de Poncio Pilato,</p>
+                            <p>fué crucificado, murió y fue sepultado.</p>
+                            <p>Descendió a los infiernos.</p>
+                            <p>Al tercer día resucitó de entre los muertos.</p>
+                            <p>Subió a los cielos</p>
+                            <p>y está sentado a la derecha del Padre.</p>
+                            <p>Desde allí vendrá a juzgar a vivos y muertos.</p>
+                            <p>Creo en el Espíritu Santo,</p>
+                            <p>la santa Iglesia católica,</p>
+                            <p>la comunión de los santos,</p>
+                            <p>el perdón de los pecados,</p>
+                            <p>la resurrección de la carne</p>
+                            <p>y la vida eterna. Amén.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="recurso-footnote">
+                    <p>* refiriéndose a la iglesia cristiana universal: todos los creyentes en Jesucristo.</p>
+                </div>
+
+                <div class="recurso-back-action">
+                    <a href="../../recursos.html" class="btn-volver-recursos">
+                        <i class="fa-solid fa-arrow-left"></i> Volver a Recursos
+                    </a>
+                </div>
+            </div>
+        </main>
+
+        <footer class="site-footer">
+            <div class="footer-content">
+                <p>&copy; 2026 Instituto Middle Assembly of Las Naciones. Todos los derechos reservados.</p>
+                <p class="footer-sub">Departamento de Desarrollo y Liderazgo</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="../../script.js"></script>
+</body>
+</html>
