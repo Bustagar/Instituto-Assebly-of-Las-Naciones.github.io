@@ -1654,7 +1654,6 @@ const catecismoData = [
         ]
     }
 ];
-
 // ==========================================
 // 1. RENDERIZAR MENÚ LATERAL CON CATEGORÍAS Y SCROLL PROPIO
 // ==========================================
@@ -1733,7 +1732,10 @@ function loadSection(index) {
 
     let html = `
         <div class="heidelberg-content-card" style="background: rgba(18, 21, 31, 0.95); border: 1px solid #2d3248; border-radius: 12px; padding: 45px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); margin: 30px;">
-            <h1 style="color: #ffffff; font-size: 2.2rem; font-weight: 700; margin-bottom: 25px; margin-top: 0;">${section.seccion}</h1>
+            <button class="btn-back-mobile" onclick="volverAlMenuMovil()">
+                <i class="fa-solid fa-arrow-left"></i> Volver al menú
+            </button>
+            <h1 style="color: #ffffff; font-size: 2.2rem; font-weight: 700; margin-bottom: 25px; margin-top: 15px;">${section.seccion}</h1>
     `;
     
     section.preguntas.forEach(qa => {
@@ -1775,10 +1777,28 @@ function loadSection(index) {
     
     // Reinicia el scroll interno del contenido a la cima sin mover la página entera
     mainContent.scrollTop = 0;
+
+    // Lógica para celulares: mostrar contenido y ocultar menú al hacer clic en un día
+    if (window.innerWidth <= 768) {
+        const layout = document.querySelector('.heidelberg-layout');
+        if (layout) layout.classList.add('show-content');
+        const mainContainer = document.querySelector('.heidelberg-main');
+        if (mainContainer) mainContainer.scrollTop = 0;
+    }
 }
 
 // ==========================================
-// 3. FILTRO DE BÚSQUEDA EN TIEMPO REAL
+// 3. FUNCIÓN PARA VOLVER AL MENÚ EN MÓVIL
+// ==========================================
+function volverAlMenuMovil() {
+    const layout = document.querySelector('.heidelberg-layout');
+    if (layout) {
+        layout.classList.remove('show-content');
+    }
+}
+
+// ==========================================
+// 4. FILTRO DE BÚSQUEDA EN TIEMPO REAL
 // ==========================================
 function filterContent() {
     const inputElement = document.getElementById('searchInput');
@@ -1812,13 +1832,17 @@ function filterContent() {
 }
 
 // ==========================================
-// 4. INICIALIZAR AL CARGAR LA PÁGINA
+// 5. INICIALIZAR AL CARGAR LA PÁGINA
 // ==========================================
 window.addEventListener('DOMContentLoaded', () => {
     if (typeof catecismoData !== 'undefined') {
         renderNav();
         if (catecismoData.length > 0) {
-            loadSection(0);
+            // En móvil al cargar la página por primera vez no abrimos automáticamente el primer día para que vea el menú limpio, 
+            // pero en PC sí lo cargamos.
+            if (window.innerWidth > 768) {
+                loadSection(0);
+            }
         }
     } else {
         console.error("No se encontró la variable catecismoData.");

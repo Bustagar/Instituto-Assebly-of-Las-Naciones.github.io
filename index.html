@@ -100,19 +100,6 @@
                     <select id="nav-language-select">
                         <option value="es">Español</option>
                         <option value="en">English</option>
-                        <option value="ht">Kreyòl Ayisyen</option>
-                        <option value="ko">한국어</option>
-                        <option value="zh">繁體中文 (Hong Kong)</option>
-                        <option value="it">Italiano</option>
-                        <option value="fr">Français</option>
-                        <option value="pt">Português</option>
-                        <option value="de">Deutsch</option>
-                        <option value="ru">Русский</option>
-                        <option value="ar">العربية</option>
-                        <option value="ja">日本語</option>
-                        <option value="hi">हिन्दी</option>
-                        <option value="tr">Türkçe</option>
-                        <option value="nl">Nederlands</option>
                     </select>
                 </div>
 
@@ -122,22 +109,77 @@
             </nav>
         </header>
 
-        <!-- Hero Section con el Logo Grande Enlazado y Mensaje Institucional -->
-        <main class="hero-section">
-            <div class="hero-overlay"></div>
-            <div class="hero-content">
-                <!-- Logotipo grande enlazado a la página oficial -->
-                <a href="https://classisdelasnaciones.org/" target="_blank" rel="noopener noreferrer" class="hero-logo-link" title="Visita nuestra página oficial">
-                    <img src="imagenes/Logo.png" alt="Logo Oficial Classis de las Naciones" class="hero-logo-main">
+        <!-- Hero Section con la Publicación y el Flyer de la Escuela Reformada -->
+        <main class="hero-section" style="position: relative; display: block; padding-top: 40px;">
+            
+            <!-- Botón de Visita a la Web Oficial en la esquina superior izquierda con efecto hover iluminado -->
+            <div style="position: absolute; top: 25px; left: 40px; z-index: 10;">
+                <a href="https://classisdelasnaciones.org/" target="_blank" rel="noopener noreferrer" style="background: rgba(24, 26, 38, 0.85); border: 1px solid rgba(74, 128, 240, 0.5); color: #ffffff; padding: 10px 18px; border-radius: 8px; text-decoration: none; font-size: 0.85rem; font-weight: 600; display: inline-flex; align-items: center; gap: 8px; backdrop-filter: blur(8px); box-shadow: 0 4px 15px rgba(0,0,0,0.4); transition: all 0.3s ease;" onmouseover="this.style.background='#4a80f0'; this.style.boxShadow='0 0 20px rgba(74, 128, 240, 0.8)';" onmouseout="this.style.background='rgba(24, 26, 38, 0.85)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.4)';">
+                    <i class="fa-solid fa-globe" style="color: #4a80f0;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#4a80f0'"></i> Visita nuestra página oficial
                 </a>
+            </div>
 
-                <h1 data-i18n="welcomeTitle">Bienvenido a la Plataforma Educativa</h1>
-                <p data-i18n="welcomeMsg">Explora tus materias, recursos de estudio y fechas importantes desde el menú superior.</p>
+            <!-- Logotipo grande en la esquina superior derecha -->
+            <div style="position: absolute; top: 25px; right: 40px; z-index: 10;">
+                <a href="https://classisdelasnaciones.org/" target="_blank" rel="noopener noreferrer" title="Visita nuestra página oficial">
+                    <img src="imagenes/Logo.png" alt="Logo Oficial Classis de las Naciones" style="max-height: 75px; filter: drop-shadow(0 4px 10px rgba(0,0,0,0.5)); transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.05)';" onmouseout="this.style.transform='scale(1)';">
+                </a>
+            </div>
+
+            <div class="hero-overlay"></div>
+            
+            <div class="hero-content" style="max-width: 950px; margin: 0 auto; padding: 20px; text-align: center;">
+
+                <h1 data-i18n="welcomeTitle" style="font-size: 2rem; margin-top: 10px; margin-bottom: 5px;">Instituto Middle Assembly of Las Naciones</h1>
+                <p data-i18n="welcomeMsg" style="margin-bottom: 25px; color: #cbd5e1;">Plataforma Educativa Oficial • Departamento de Desarrollo y Liderazgo</p>
                 
-                <!-- Botón / Mensaje interactivo hacia la web oficial -->
-                <div class="official-site-banner">
-                    <a href="https://classisdelasnaciones.org/" target="_blank" rel="noopener noreferrer" class="btn-official-site">
-                        <i class="fa-solid fa-globe"></i> Visita nuestra página oficial
+                <!-- Tarjeta Ejecutiva con el Flyer Integrado -->
+                <div class="executive-announcement-card" style="background: rgba(24, 26, 38, 0.9); border: 1px solid #2d3248; border-radius: 12px; padding: 25px; text-align: left; box-shadow: 0 15px 35px rgba(0,0,0,0.6); backdrop-filter: blur(10px); margin-bottom: 25px;">
+                    
+                    <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 15px; margin-bottom: 20px;">
+                        <div>
+                            <span style="background: #4a80f0; color: white; padding: 4px 10px; border-radius: 4px; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">Nueva Apertura</span>
+                            <h2 style="color: #ffffff; font-size: 1.6rem; margin: 6px 0 0 0; font-family: inherit;">Escuela Reformada: Teología y Liderazgo</h2>
+                        </div>
+                        <div style="background: rgba(74, 128, 240, 0.15); border: 1px solid rgba(74, 128, 240, 0.4); padding: 8px 15px; border-radius: 8px; text-align: center;">
+                            <span style="display: block; font-size: 0.7rem; color: #94a3b8; text-transform: uppercase;">Inicia</span>
+                            <strong style="color: #ffffff; font-size: 1rem;"><i class="fa-solid fa-calendar-days" style="color: #4a80f0; margin-right: 4px;"></i> 7 de Noviembre</strong>[cite: 7]
+                        </div>
+                    </div>
+
+                    <!-- Contenedor del Flyer Visual -->
+                    <div style="margin-bottom: 20px; border-radius: 8px; overflow: hidden; border: 1px solid rgba(255,255,255,0.15); box-shadow: 0 8px 20px rgba(0,0,0,0.4);">
+                        <img src="/fotos_de_index_anuncios/flayer.png" alt="Flyer Escuela Reformada Teología y Liderazgo" style="width: 100%; height: auto; display: block; max-height: 450px; object-fit: cover;">
+                    </div>
+
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; margin-bottom: 20px;">
+                        <div style="background: rgba(255,255,255,0.03); padding: 10px 12px; border-radius: 6px; border-left: 3px solid #4a80f0;">
+                            <strong style="color: #ffffff; display: block; font-size: 0.9rem; margin-bottom: 2px;"><i class="fa-solid fa-book-bible"></i> Doctrina Reformada</strong>
+                            <span style="color: #94a3b8; font-size: 0.8rem;">Fundamentos doctrinales.</span>
+                        </div>
+                        <div style="background: rgba(255,255,255,0.03); padding: 10px 12px; border-radius: 6px; border-left: 3px solid #4a80f0;">
+                            <strong style="color: #ffffff; display: block; font-size: 0.9rem; margin-bottom: 2px;"><i class="fa-solid fa-graduation-cap"></i> Teología Reformada</strong>
+                            <span style="color: #94a3b8; font-size: 0.8rem;">Estudio sistemático.</span>
+                        </div>
+                        <div style="background: rgba(255,255,255,0.03); padding: 10px 12px; border-radius: 6px; border-left: 3px solid #4a80f0;">
+                            <strong style="color: #ffffff; display: block; font-size: 0.9rem; margin-bottom: 2px;"><i class="fa-solid fa-landmark"></i> Gobierno Reformado</strong>
+                            <span style="color: #94a3b8; font-size: 0.8rem;">Estructura y eclesiología.</span>
+                        </div>
+                        <div style="background: rgba(255,255,255,0.03); padding: 10px 12px; border-radius: 6px; border-left: 3px solid #4a80f0;">
+                            <strong style="color: #ffffff; display: block; font-size: 0.9rem; margin-bottom: 2px;"><i class="fa-solid fa-user-tie"></i> Liderazgo Eficaz</strong>
+                            <span style="color: #94a3b8; font-size: 0.8rem;">Aplicación ministerial.</span>
+                        </div>
+                    </div>
+
+                    <div style="text-align: center; font-style: italic; color: #cbd5e1; font-size: 0.85rem; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 12px;">
+                        "Procura con diligencia presentarte a Dios aprobado, como obrero que no tiene de qué avergonzarse..." — 2 Timoteo 2:15
+                    </div>
+                </div>
+                
+                <!-- Botón inferior para ir a las clases con efecto de iluminación -->
+                <div class="official-site-banner" style="display: flex; justify-content: center;">
+                    <a href="clases.html" class="btn-official-site" style="background: #4a80f0; color: white; padding: 12px 28px; border-radius: 6px; text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 8px; box-shadow: 0 4px 15px rgba(74, 128, 240, 0.4); transition: all 0.3s ease;" onmouseover="this.style.boxShadow='0 0 25px rgba(74, 128, 240, 0.9)'; this.style.transform='translateY(-2px)';" onmouseout="this.style.boxShadow='0 4px 15px rgba(74, 128, 240, 0.4)'; this.style.transform='translateY(0)';">
+                        <i class="fa-solid fa-book-open"></i> Ver Mis Clases de la Escuela Reformada
                     </a>
                 </div>
             </div>

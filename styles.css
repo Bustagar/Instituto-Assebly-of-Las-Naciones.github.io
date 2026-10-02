@@ -183,7 +183,7 @@ select option {
     display: block;
 }
 
-/* --- Navbar Superior --- */
+/* --- Navbar Superior unificado para todos los HTML --- */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -238,13 +238,15 @@ select option {
     text-transform: uppercase;
 }
 
-.menu-toggle {
-    display: none;
+/* --- Botón Hamburguesa Universal (Oculto en PC por defecto) --- */
+.menu-toggle,
+.mobile-menu-toggle {
+    display: none !important;
     background: transparent !important;
     border: none !important;
     outline: none;
     color: #ffffff;
-    font-size: 24px;
+    font-size: 22px;
     cursor: pointer;
     padding: 5px;
 }
@@ -312,7 +314,7 @@ select option {
     color: #ffffff;
 }
 
-/* --- Hero Section & Fondos Unificados --- */
+/* --- Hero Section & Fondos Unificados (¡ESTE SE CONSERVA INTEGRO!) --- */
 .hero-section {
     position: relative;
     width: 100%;
@@ -1006,4 +1008,117 @@ body.page-heidelberg .heidelberg-main {
     overflow-y: auto; /* Scroll independiente para el contenido del texto principal */
     background-color: #181a26;
     height: 100%;
+}
+/* ==========================================================
+   --- ESTILOS RESPONSIVOS PARA MÓVILES (CATECISMO) ---
+   ========================================================== */
+@media screen and (max-width: 768px) {
+    /* Forzar visibilidad del botón de hamburguesa en la barra superior en móviles */
+    body.page-heidelberg .navbar .menu-toggle,
+    body.page-heidelberg .navbar .mobile-menu-toggle {
+        display: block !important;
+    }
+
+    /* Estilo del menú desplegable de la barra de navegación en móvil */
+    body.page-heidelberg .navbar .nav-links {
+        display: none !important;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #11131c;
+        flex-direction: column;
+        padding: 20px;
+        gap: 15px;
+        z-index: 9999;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.8);
+        border-bottom: 1px solid #2d3248;
+        max-height: calc(100vh - 60px);
+        overflow-y: auto;
+        box-sizing: border-box;
+    }
+
+    /* Mostrar los enlaces cuando el script active la clase .active */
+    body.page-heidelberg .navbar .nav-links.active {
+        display: flex !important;
+    }
+
+    /* Ajuste del layout principal del Catecismo en celulares */
+    body.page-heidelberg .heidelberg-layout {
+        position: relative;
+        overflow: hidden;
+        height: calc(100vh - 60px);
+    }
+
+    /* Por defecto en celular, mostramos el aside ocupando todo */
+    body.page-heidelberg .heidelberg-aside {
+        width: 100% !important;
+        height: 100%;
+        display: flex;
+    }
+
+    /* Ocultamos el main por defecto en celular hasta que elijan una opción */
+    body.page-heidelberg .heidelberg-main {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 10;
+        background-color: #181a26;
+        padding: 20px;
+        box-sizing: border-box;
+        overflow-y: auto;
+    }
+
+    /* Clase que activaremos por JS cuando el usuario haga clic en un tema en celular */
+    body.page-heidelberg .heidelberg-layout.show-content .heidelberg-aside {
+        display: none;
+    }
+
+    body.page-heidelberg .heidelberg-layout.show-content .heidelberg-main {
+        display: block;
+    }
+
+    /* Estilo para el botón de "Volver" en móvil */
+    .btn-back-mobile {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: #2d3248;
+        color: #ffffff;
+        border: none;
+        padding: 10px 16px;
+        border-radius: 6px;
+        margin-bottom: 20px;
+        cursor: pointer;
+        font-size: 0.9rem;
+    }
+}
+
+/* En pantallas grandes (PC), nos aseguramos que el menú hamburguesa y el botón de volver estén ocultos */
+@media screen and (min-width: 769px) {
+    body.page-heidelberg .navbar .menu-toggle,
+    body.page-heidelberg .navbar .mobile-menu-toggle {
+        display: none !important;
+    }
+
+    .btn-back-mobile {
+        display: none !important;
+    }
+}
+.creed-text {
+    color: #e2e8f0;
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+.creed-text p {
+    margin-bottom: 24px;
+}
+
+.creed-indent {
+    display: inline-block;
+    padding-left: 35px;
 }

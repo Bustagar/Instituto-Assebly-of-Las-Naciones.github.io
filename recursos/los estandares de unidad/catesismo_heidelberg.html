@@ -13,42 +13,59 @@
 
     <div class="app-wrapper heidelberg-app-wrapper">
         
-        <!-- Navbar Superior Oficial -->
-        <nav class="navbar">
+         <!-- Navbar Superior Compartida -->
+        <header class="navbar">
             <div class="nav-left">
                 <div class="logo">
-                    <img src="../../imagenes/Logo.png" alt="Logo" class="logo-site">
+                    <img src="../../imagenes/Logo.png" alt="Logo Middle Assembly" class="logo-site">
                     <div class="logo-text">
-                        <span class="brand-name">Instituto Middle Assembly of Las Naciones</span>
-                        <span class="brand-sub">DEPARTAMENTO DE DESARROLLO Y LIDERAZGO</span>
+                        <span class="brand-name" data-i18n="brandName">Instituto Middle Assembly of Las Naciones</span>
+                        <span class="brand-sub" data-i18n="brandSub">Departamento de Desarrollo y Liderazgo</span>
                     </div>
                 </div>
             </div>
-            
-            <div class="nav-links" id="navLinks">
-                <a href="../../index.html">Inicio</a>
-                <a href="../../clases.html">Clases</a>
-                <a href="../recursos.html" class="active">Recursos</a>
-                <a href="../../calendario.html">Calendario</a>
-                <a href="../../tareas.html">Tareas</a>
-                <a href="../../foro.html">Foro</a>
-                <a href="../../avisos.html">Avisos</a>
-                <a href="../../perfil.html">Mi Perfil</a>
-                <a href="../../soporte.html">Soporte</a>
-                
+
+            <button class="menu-toggle" id="mobile-menu-btn" aria-label="Abrir menú">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <nav class="nav-links" id="nav-menu">
+                <a href="../../index.html" data-i18n="navHome">Inicio</a>
+                <a href="../../clases.html" data-i18n="navClasses">Clases</a>
+                <a href="../../recursos.html" class="active" data-i18n="navResources">Recursos</a>
+                <a href="../../calendario.html" data-i18n="navCalendar">Calendario</a>
+                <a href="../../tareas.html" data-i18n="navTasks">Tareas</a>
+                <a href="../../foro.html" data-i18n="navForum">Foro</a>
+                <a href="../../avisos.html" data-i18n="navNotices">Avisos</a>
+                <a href="../../perfil.html" data-i18n="navProfile">Mi Perfil</a>
+                <a href="../../soporte.html" data-i18n="navSupport">Soporte</a>
+
                 <div class="lang-selector">
                     <i class="fa-solid fa-globe"></i>
-                    <select id="langSelect">
-                        <option value="es" selected>Español</option>
+                    <select id="nav-language-select">
+                        <option value="es">Español</option>
                         <option value="en">English</option>
+                        <option value="ht">Kreyòl Ayisyen</option>
+                        <option value="ko">한국어</option>
+                        <option value="zh">繁體中文 (Hong Kong)</option>
+                        <option value="it">Italiano</option>
+                        <option value="fr">Français</option>
+                        <option value="pt">Português</option>
+                        <option value="de">Deutsch</option>
+                        <option value="ru">Русский</option>
+                        <option value="ar">العربية</option>
+                        <option value="ja">日本語</option>
+                        <option value="hi">हिन्दी</option>
+                        <option value="tr">Türkçe</option>
+                        <option value="nl">Nederlands</option>
                     </select>
                 </div>
-                
-                <button class="btn-logout" onclick="window.location.href='../../login.html'">
-                    <i class="fa-solid fa-right-from-bracket"></i> Salir
+
+                <button id="logout-btn" class="btn-logout" title="Cerrar sesión">
+                    <i class="fa-solid fa-right-from-bracket"></i> <span data-i18n="logout">Salir</span>
                 </button>
-            </div>
-        </nav>
+            </nav>
+        </header>
 
         <!-- Contenedor Específico del Catecismo -->
         <div class="heidelberg-layout">
@@ -85,6 +102,7 @@
 
     </div>
 
+    <!-- Script principal unificado -->
     <script src="../../script.js"></script>
 </body>
 </html>
