@@ -12,8 +12,6 @@
 
     <!-- Modal de Inicio de Sesión -->
     <div id="login-modal" class="modal-overlay">
-        
-        <!-- Selector de idioma ubicado en la esquina superior derecha de la pantalla -->
         <div class="modal-lang-selector-top">
             <i class="fa-solid fa-globe"></i>
             <select id="login-language-select">
@@ -35,7 +33,6 @@
             </select>
         </div>
 
-        <!-- Cuadro del Login -->
         <div class="modal-card">
             <div class="modal-header">
                 <img src="imagenes/Logo.png" alt="Logo Middle Assembly" class="modal-logo">
@@ -69,6 +66,8 @@
 
     <!-- Contenido de la Aplicación -->
     <div id="app-content" class="hidden app-wrapper">
+        
+        <!-- Barra de Navegación con Menú Hamburguesa Restaurado -->
         <header class="navbar">
             <div class="nav-left">
                 <div class="logo">
@@ -80,6 +79,7 @@
                 </div>
             </div>
 
+            <!-- Botón del menú hamburguesa para dispositivos móviles -->
             <button class="menu-toggle" id="mobile-menu-btn" aria-label="Abrir menú">
                 <i class="fa-solid fa-bars"></i>
             </button>
@@ -100,6 +100,19 @@
                     <select id="nav-language-select">
                         <option value="es">Español</option>
                         <option value="en">English</option>
+                        <option value="ht">Kreyòl Ayisyen</option>
+                        <option value="ko">한국어</option>
+                        <option value="zh">繁體中文 (Hong Kong)</option>
+                        <option value="it">Italiano</option>
+                        <option value="fr">Français</option>
+                        <option value="pt">Português</option>
+                        <option value="de">Deutsch</option>
+                        <option value="ru">Русский</option>
+                        <option value="ar">العربية</option>
+                        <option value="ja">日本語</option>
+                        <option value="hi">हिन्दी</option>
+                        <option value="tr">Türkçe</option>
+                        <option value="nl">Nederlands</option>
                     </select>
                 </div>
 
@@ -109,29 +122,20 @@
             </nav>
         </header>
 
-        <!-- Hero Section con la Publicación y el Flyer de la Escuela Reformada -->
-        <main class="hero-section" style="position: relative; display: block; padding-top: 40px;">
-            
-            <!-- Botón de Visita a la Web Oficial en la esquina superior izquierda con efecto hover iluminado -->
-            <div style="position: absolute; top: 25px; left: 40px; z-index: 10;">
-                <a href="https://classisdelasnaciones.org/" target="_blank" rel="noopener noreferrer" style="background: rgba(24, 26, 38, 0.85); border: 1px solid rgba(74, 128, 240, 0.5); color: #ffffff; padding: 10px 18px; border-radius: 8px; text-decoration: none; font-size: 0.85rem; font-weight: 600; display: inline-flex; align-items: center; gap: 8px; backdrop-filter: blur(8px); box-shadow: 0 4px 15px rgba(0,0,0,0.4); transition: all 0.3s ease;" onmouseover="this.style.background='#4a80f0'; this.style.boxShadow='0 0 20px rgba(74, 128, 240, 0.8)';" onmouseout="this.style.background='rgba(24, 26, 38, 0.85)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.4)';">
-                    <i class="fa-solid fa-globe" style="color: #4a80f0;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#4a80f0'"></i> Visita nuestra página oficial
-                </a>
-            </div>
-
-            <!-- Logotipo grande en la esquina superior derecha -->
-            <div style="position: absolute; top: 25px; right: 40px; z-index: 10;">
-                <a href="https://classisdelasnaciones.org/" target="_blank" rel="noopener noreferrer" title="Visita nuestra página oficial">
-                    <img src="imagenes/Logo.png" alt="Logo Oficial Classis de las Naciones" style="max-height: 75px; filter: drop-shadow(0 4px 10px rgba(0,0,0,0.5)); transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.05)';" onmouseout="this.style.transform='scale(1)';">
-                </a>
-            </div>
-
+        <!-- Hero Section con Diseño Responsivo y Estructurado -->
+        <main class="hero-section" style="position: relative; display: block; padding-top: 30px;">
             <div class="hero-overlay"></div>
-            
-            <div class="hero-content" style="max-width: 950px; margin: 0 auto; padding: 20px; text-align: center;">
 
-                <h1 data-i18n="welcomeTitle" style="font-size: 2rem; margin-top: 10px; margin-bottom: 5px;">Instituto Middle Assembly of Las Naciones</h1>
-                <p data-i18n="welcomeMsg" style="margin-bottom: 25px; color: #cbd5e1;">Plataforma Educativa Oficial • Departamento de Desarrollo y Liderazgo</p>
+          <!-- Botón posicionado de forma absoluta en la esquina superior izquierda del main -->
+             <a href="https://classisdelasnaciones.org/" target="_blank" rel="noopener noreferrer" style="position: absolute; top: 15px; left: 20px; z-index: 10; background: rgba(24, 26, 38, 0.85); border: 1px solid rgba(74, 128, 240, 0.5); color: #ffffff; padding: 8px 14px; border-radius: 8px; text-decoration: none; font-size: 0.85rem; font-weight: 600; display: inline-flex; align-items: center; gap: 8px; backdrop-filter: blur(8px); box-shadow: 0 4px 15px rgba(0,0,0,0.4); transition: all 0.3s ease;" onmouseover="this.style.background='#4a80f0'; this.style.boxShadow='0 0 20px rgba(74, 128, 240, 0.8)';" onmouseout="this.style.background='rgba(24, 26, 38, 0.85)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.4)';">
+                 <i class="fa-solid fa-globe" style="color: #4a80f0;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#4a80f0'"></i> Visita nuestra página oficial
+            </a>
+            
+            <div class="hero-content" style="max-width: 950px; margin: 0 auto; padding: 20px; text-align: center; position: relative;">
+
+
+                <h1 data-i18n="welcomeTitle" style="font-size: 2rem; margin-top: 10px; margin-bottom: 5px; text-align: left;">Instituto Middle Assembly of Las Naciones</h1>
+                <p data-i18n="welcomeMsg" style="margin-bottom: 25px; color: #cbd5e1; text-align: left;">Plataforma Educativa Oficial • Departamento de Desarrollo y Liderazgo</p>
                 
                 <!-- Tarjeta Ejecutiva con el Flyer Integrado -->
                 <div class="executive-announcement-card" style="background: rgba(24, 26, 38, 0.9); border: 1px solid #2d3248; border-radius: 12px; padding: 25px; text-align: left; box-shadow: 0 15px 35px rgba(0,0,0,0.6); backdrop-filter: blur(10px); margin-bottom: 25px;">
@@ -143,7 +147,7 @@
                         </div>
                         <div style="background: rgba(74, 128, 240, 0.15); border: 1px solid rgba(74, 128, 240, 0.4); padding: 8px 15px; border-radius: 8px; text-align: center;">
                             <span style="display: block; font-size: 0.7rem; color: #94a3b8; text-transform: uppercase;">Inicia</span>
-                            <strong style="color: #ffffff; font-size: 1rem;"><i class="fa-solid fa-calendar-days" style="color: #4a80f0; margin-right: 4px;"></i> 7 de Noviembre</strong>[cite: 7]
+                            <strong style="color: #ffffff; font-size: 1rem;"><i class="fa-solid fa-calendar-days" style="color: #4a80f0; margin-right: 4px;"></i> 7 de Noviembre 2026</strong>
                         </div>
                     </div>
 
@@ -176,7 +180,7 @@
                     </div>
                 </div>
                 
-                <!-- Botón inferior para ir a las clases con efecto de iluminación -->
+                <!-- Botón inferior -->
                 <div class="official-site-banner" style="display: flex; justify-content: center;">
                     <a href="clases.html" class="btn-official-site" style="background: #4a80f0; color: white; padding: 12px 28px; border-radius: 6px; text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 8px; box-shadow: 0 4px 15px rgba(74, 128, 240, 0.4); transition: all 0.3s ease;" onmouseover="this.style.boxShadow='0 0 25px rgba(74, 128, 240, 0.9)'; this.style.transform='translateY(-2px)';" onmouseout="this.style.boxShadow='0 4px 15px rgba(74, 128, 240, 0.4)'; this.style.transform='translateY(0)';">
                         <i class="fa-solid fa-book-open"></i> Ver Mis Clases de la Escuela Reformada

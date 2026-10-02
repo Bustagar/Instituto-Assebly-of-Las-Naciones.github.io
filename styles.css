@@ -58,14 +58,14 @@ select option {
 
 .modal-lang-selector-top {
     position: absolute;
-    top: 25px;
-    right: 30px;
+    top: 1.5rem;
+    right: 1.8rem;
     display: flex;
     align-items: center;
     gap: 8px;
     background: #252836;
-    padding: 8px 14px;
-    border-radius: 6px;
+    padding: 0.5rem 0.8rem;
+    border-radius: 0.375rem;
     border: 1px solid #2d3248;
     z-index: 1001;
 }
@@ -80,7 +80,7 @@ select option {
     color: #ffffff;
     border: none;
     outline: none;
-    font-size: 14px;
+    font-size: 0.875rem;
     cursor: pointer;
 }
 
@@ -90,7 +90,7 @@ select option {
     border-radius: 12px;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
     width: 90%;
-    max-width: 420px;
+    max-width: 26.25rem;
     border: 1px solid #2d3248;
 }
 
@@ -102,7 +102,7 @@ select option {
 }
 
 .modal-logo {
-    height: 150px;
+    height: 9.375rem;
     object-fit: contain;
 }
 
@@ -115,18 +115,18 @@ select option {
 .modal-body p {
     font-size: 12px;
     color: #9ba0b4;
-    margin-bottom: 20px;
+    margin-bottom: 1.2rem;
 }
 
 .form-group {
-    margin-bottom: 18px;
+    margin-bottom: 1.1rem;
     display: flex;
     flex-direction: column;
     gap: 6px;
 }
 
 .form-group label {
-    font-size: 13px;
+    font-size: 0.8rem;
     color: #8c93a8;
 }
 
@@ -137,7 +137,7 @@ select option {
     border: 1px solid #2d3248;
     background: #252836;
     color: #ffffff;
-    font-size: 14px;
+    font-size: 0.875rem;
     outline: none;
     transition: border-color 0.2s;
 }
@@ -152,8 +152,8 @@ select option {
     background: #4a80f0;
     color: white;
     border: none;
-    border-radius: 6px;
-    font-size: 15px;
+    border-radius: 0.375rem;
+    font-size: 0.95rem;
     font-weight: 600;
     cursor: pointer;
     transition: background 0.2s;
@@ -169,8 +169,8 @@ select option {
 
 .login-error {
     color: #ff5252;
-    font-size: 13px;
-    margin-bottom: 15px;
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
     text-align: center;
     display: none;
     background: rgba(255, 82, 82, 0.1);
@@ -183,14 +183,14 @@ select option {
     display: block;
 }
 
-/* --- Navbar Superior unificado para todos los HTML --- */
+/* --- Navbar Superior unificado --- */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #181a26;
-    padding: 10px 25px;
-    height: 60px;
+    padding: 0.6rem 1.5rem;
+    height: 3.75rem;
     position: sticky;
     top: 0;
     z-index: 100;
@@ -201,19 +201,19 @@ select option {
 .nav-left {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 1.25rem;
     height: 100%;
 }
 
 .logo {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 0.75rem;
     height: 100%;
 }
 
 .logo-site {
-    height: 40px;
+    height: 2.5rem;
     width: auto;
     object-fit: contain;
     display: block;
@@ -227,40 +227,42 @@ select option {
 
 .brand-name {
     font-weight: 700;
-    font-size: 15px;
-    letter-spacing: 0.5px;
+    font-size: 0.95rem;
+    letter-spacing: 0.03rem;
     color: #ffffff;
 }
 
 .brand-sub {
-    font-size: 10px;
+    font-size: 0.625rem;
     color: #9ba0b4;
     text-transform: uppercase;
 }
 
-/* --- Botón Hamburguesa Universal (Oculto en PC por defecto) --- */
+/* --- Botón Hamburguesa y Enlaces Base (Escritorio / Por defecto) --- */
 .menu-toggle,
-.mobile-menu-toggle {
-    display: none !important;
-    background: transparent !important;
-    border: none !important;
+.mobile-menu-toggle,
+.hamburger-menu {
+    display: none; /* Se oculta en PC */
+    background: transparent;
+    border: none;
     outline: none;
     color: #ffffff;
-    font-size: 22px;
+    font-size: 1.5rem;
     cursor: pointer;
-    padding: 5px;
+    padding: 0.3rem;
+    z-index: 1001;
 }
 
 .nav-links {
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 1rem;
 }
 
 .nav-links a {
     color: #8c93a8;
     text-decoration: none;
-    font-size: 14px;
+    font-size: 0.875rem;
     font-weight: 600;
     transition: color 0.2s;
     cursor: pointer;
@@ -274,16 +276,16 @@ select option {
 .lang-selector {
     display: flex;
     align-items: center;
-    gap: 6px;
+    gap: 0.375rem;
     background: #252836;
-    padding: 6px 10px;
-    border-radius: 4px;
+    padding: 0.375rem 0.6rem;
+    border-radius: 0.25rem;
     border: 1px solid #2d3248;
 }
 
 .lang-selector i {
     color: #8c93a8;
-    font-size: 14px;
+    font-size: 0.875rem;
 }
 
 .lang-selector select {
@@ -291,7 +293,7 @@ select option {
     color: #ffffff;
     border: none;
     outline: none;
-    font-size: 13px;
+    font-size: 0.8rem;
     cursor: pointer;
 }
 
@@ -299,14 +301,14 @@ select option {
     background: transparent;
     border: 1px solid #ff5252;
     color: #ff5252;
-    padding: 6px 12px;
-    border-radius: 4px;
+    padding: 0.375rem 0.75rem;
+    border-radius: 0.25rem;
     cursor: pointer;
-    font-size: 13px;
+    font-size: 0.8rem;
     transition: all 0.2s;
     display: flex;
     align-items: center;
-    gap: 6px;
+    gap: 0.375rem;
 }
 
 .btn-logout:hover {
@@ -314,17 +316,17 @@ select option {
     color: #ffffff;
 }
 
-/* --- Hero Section & Fondos Unificados (¡ESTE SE CONSERVA INTEGRO!) --- */
+/* --- Hero Section & Fondos --- */
 .hero-section {
     position: relative;
     width: 100%;
-    min-height: calc(100vh - 110px);
+    min-height: calc(100vh - 6.875rem);
     background: url('https://images.unsplash.com/photo-1521587760476-6c12a4b040da?auto=format&fit=crop&q=80&w=1600') center/cover no-repeat;
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    justify-content: center !important;
-    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2.5rem 1.25rem;
     overflow-x: hidden;
 }
 
@@ -342,8 +344,8 @@ select option {
     position: relative;
     z-index: 2;
     text-align: center;
-    padding: 20px;
-    max-width: 900px;
+    padding: 1.25rem;
+    max-width: 56.25rem;
     width: 100%;
 }
 
@@ -351,46 +353,49 @@ select option {
     font-size: 2.8rem;
     font-weight: 700;
     color: #ffffff;
-    margin-bottom: 16px;
-    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+    margin-bottom: 1rem;
+    text-shadow: 0 0.125rem 0.375rem rgba(0, 0, 0, 0.6);
+    word-break: break-word;
 }
 
 .hero-content p {
     font-size: 1.25rem;
     color: #e2e8f0;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+    text-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.6);
+    word-break: break-word;
 }
 
-/* --- Recursos y Calendario Adaptados al Hero --- */
+/* --- Recursos y Calendario --- */
 .recursos-hero {
     justify-content: flex-start !important;
 }
 
 .recursos-container-inner {
-    max-width: 1100px !important;
-    margin: 20px auto;
+    max-width: 68.75rem !important;
+    margin: 1.25rem auto;
     text-align: left !important;
     width: 100% !important;
 }
 
 .recursos-header {
     text-align: center;
-    margin-bottom: 35px;
+    margin-bottom: 2.2rem;
 }
 
 .recursos-header h3 {
     font-size: 0.95rem;
     color: #4a80f0;
     text-transform: uppercase;
-    letter-spacing: 1.5px;
-    margin-bottom: 8px;
+    letter-spacing: 0.1rem;
+    margin-bottom: 0.5rem;
 }
 
 .recursos-header h1 {
     font-size: 2.3rem;
     color: #ffffff;
-    margin-bottom: 10px;
+    margin-bottom: 0.6rem;
     font-weight: 700;
+    word-break: break-word;
 }
 
 .recursos-header p {
@@ -401,7 +406,7 @@ select option {
 
 /* --- Agrupaciones de Recursos --- */
 .recursos-section-group {
-    margin-bottom: 35px;
+    margin-bottom: 2.2rem;
     width: 100%;
 }
 
@@ -413,7 +418,7 @@ select option {
     border-bottom: 1px solid rgba(255, 255, 255, 0.15);
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 0.6rem;
 }
 
 .section-category-title i {
@@ -424,8 +429,8 @@ select option {
 /* --- Tarjetas de Láminas (Recursos) - Más oscuras --- */
 .laminas-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(16.25rem, 1fr));
+    gap: 1.25rem;
     width: 100%;
 }
 
@@ -438,12 +443,12 @@ select option {
     align-items: center;
     gap: 15px;
     text-decoration: none;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0.5rem 1.25rem rgba(0, 0, 0, 0.5);
     transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
 }
 
 .lamina-card:hover {
-    transform: translateY(-4px);
+    transform: translateY(-0.25rem);
     border-color: #4a80f0;
     background: rgba(24, 28, 41, 0.98);
 }
@@ -463,7 +468,7 @@ select option {
 
 .lamina-arrow {
     color: #727891;
-    font-size: 13px;
+    font-size: 0.8rem;
     transition: transform 0.2s ease, color 0.2s ease;
 }
 
@@ -475,15 +480,15 @@ select option {
 /* --- Cronograma y Calendario --- */
 .cronograma-header {
     text-align: center;
-    margin-bottom: 35px;
+    margin-bottom: 2.2rem;
 }
 
 .cronograma-header h3 {
     font-size: 0.95rem;
     color: #4a80f0;
     text-transform: uppercase;
-    letter-spacing: 1.5px;
-    margin-bottom: 8px;
+    letter-spacing: 0.1rem;
+    margin-bottom: 0.5rem;
 }
 
 .cronograma-header h1 {
@@ -514,7 +519,7 @@ select option {
 }
 
 .clase-card:hover {
-    transform: translateY(-4px);
+    transform: translateY(-0.25rem);
     border-color: #4a80f0;
 }
 
@@ -538,7 +543,8 @@ select option {
 .clase-info h2 {
     font-size: 1.25rem;
     color: #ffffff;
-    margin-bottom: 15px;
+    margin-bottom: 1rem;
+    word-break: break-word;
 }
 
 .fechas-list {
@@ -557,7 +563,7 @@ select option {
     text-decoration: none;
     padding: 6px 10px;
     background: rgba(255, 255, 255, 0.02);
-    border-radius: 6px;
+    border-radius: 0.375rem;
     border: 1px solid transparent;
     transition: all 0.2s ease;
 }
@@ -585,7 +591,7 @@ select option {
     text-align: center !important;
     margin-top: 15px !important;
     border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
-    padding-top: 10px !important;
+    padding-top: 0.6rem !important;
     line-height: 1.2 !important;
 }
 
@@ -618,39 +624,7 @@ select option {
     color: #636b83 !important;
 }
 
-/* --- Responsive --- */
-@media (max-width: 900px) {
-    .menu-toggle {
-        display: block;
-    }
-
-    .nav-links {
-        display: none;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        width: 100%;
-        background-color: #181a26;
-        flex-direction: column;
-        padding: 20px 0;
-        gap: 18px;
-        box-shadow: 0 8px 12px rgba(0, 0, 0, 0.6);
-        border-bottom: 1px solid #2d3248;
-    }
-
-    .nav-links.active {
-        display: flex;
-    }
-
-    .hero-content h1 {
-        font-size: 2rem;
-    }
-
-    .hero-content p {
-        font-size: 0.95rem;
-    }
-}
-/* --- Estilos para el Logo Grande del Hero en el Index --- */
+/* --- Logos y Hero Extra --- */
 .hero-logo-link {
     display: inline-block;
     margin-bottom: 20px;
@@ -663,7 +637,7 @@ select option {
 }
 
 .hero-logo-main {
-    height: 200px; /* Tamaño grande y destacado */
+    height: 200px;
     width: auto;
     object-fit: contain;
     filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.5));
@@ -681,8 +655,8 @@ select option {
     background: rgba(74, 128, 240, 0.15);
     color: #ffffff;
     border: 1px solid #4a80f0;
-    padding: 10px 22px;
-    border-radius: 8px;
+    padding: 0.6rem 1.375rem;
+    border-radius: 0.5rem;
     font-size: 0.95rem;
     font-weight: 500;
     text-decoration: none;
@@ -693,8 +667,8 @@ select option {
 .btn-official-site:hover {
     background: #4a80f0;
     color: #ffffff;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(74, 128, 240, 0.4);
+    transform: translateY(-0.125rem);
+    box-shadow: 0 0.375rem 1.25rem rgba(74, 128, 240, 0.4);
 }
 
 .btn-official-site i {
@@ -706,19 +680,19 @@ select option {
 .btn-official-site:hover i {
     color: #ffffff;
 }
+
 /* --- Estilos para la Página de Detalle de Recursos --- */
 .recurso-detalle-main {
     position: relative;
     z-index: 2;
     max-width: 1100px;
     width: 92%;
-    margin: 30px auto 60px auto;
+    margin: 1.875rem auto 3.75rem auto;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 1.25rem;
 }
 
-/* Breadcrumb / Ruta de navegación */
 .breadcrumb-container {
     font-size: 0.85rem;
     color: #8c93a8;
@@ -738,7 +712,6 @@ select option {
     color: #ffffff;
 }
 
-/* Banner Superior del Recurso */
 .recurso-hero-banner {
     position: relative;
     width: 100%;
@@ -775,23 +748,23 @@ select option {
     position: relative;
     z-index: 2;
     text-align: center;
-    padding: 20px;
+    padding: 1.25rem;
 }
 
 .recurso-banner-content h1 {
     font-size: 2.5rem;
     font-weight: 700;
     color: #ffffff;
-    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+    text-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.7);
+    word-break: break-word;
 }
 
-/* Tarjeta Contenedora Principal de Texto */
 .recurso-content-card {
     background: rgba(18, 21, 31, 0.95);
     border: 1px solid #2d3248;
-    border-radius: 12px;
-    padding: 35px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    border-radius: 0.75rem;
+    padding: 2.2rem;
+    box-shadow: 0 0.625rem 1.875rem rgba(0, 0, 0, 0.5);
 }
 
 .recurso-intro-section p {
@@ -800,66 +773,55 @@ select option {
     line-height: 1.6;
     margin-bottom: 30px;
     text-align: justify;
-    border-left: 4px solid #4a80f0;
-    padding-left: 15px;
+    border-left: 0.25rem solid #4a80f0;
+    padding-left: 0.9375rem;
 }
 
-/* Cuadrícula de Versiones */
 .versiones-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 25px;
-    margin-bottom: 25px;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
 }
 
 .version-box {
     background: rgba(25, 30, 44, 0.9);
     border: 1px solid #2d3248;
-    border-radius: 10px;
-    padding: 25px;
-    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+    border-radius: 0.625rem;
+    padding: 1.5rem;
+    box-shadow: inset 0 0.125rem 0.25rem rgba(0, 0, 0, 0.2);
 }
 
 .version-box h3 {
     font-size: 1.15rem;
     color: #4a80f0;
-    margin-bottom: 18px;
+    margin-bottom: 1.1rem;
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 0.6rem;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    padding-bottom: 10px;
+    padding-bottom: 0.6rem;
 }
 
-/* --- Ajuste equilibrado para los textos de los credos --- */
 .version-texto p {
     margin-bottom: 1rem;
     text-align: left;
     font-size: 0.95rem;
     color: #e2e8f0;
-    line-height: 1.6; /* Altura de línea natural y legible */
+    line-height: 1.6;
     white-space: pre-line;
 }
 
-/* Espaciado controlado entre cada frase o salto hecho con <br> */
-.version-texto p br {
-    display: block;
-    content: "";
-    margin-bottom: 8px !important; /* Espacio exacto y limpio entre líneas */
-}
-
-/* Nota al pie */
 .recurso-footnote {
     font-size: 0.85rem;
     color: #8c93a8;
     font-style: italic;
-    margin-top: 20px;
-    margin-bottom: 35px;
-    padding-top: 10px;
+    margin-top: 1.25rem;
+    margin-bottom: 2.2rem;
+    padding-top: 0.6rem;
     border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-/* Botón de Retorno */
 .recurso-back-action {
     text-align: left;
 }
@@ -867,12 +829,12 @@ select option {
 .btn-volver-recursos {
     display: inline-flex;
     align-items: center;
-    gap: 8px;
+    gap: 0.5rem;
     background: #252836;
     color: #ffffff;
     border: 1px solid #2d3248;
-    padding: 10px 20px;
-    border-radius: 6px;
+    padding: 0.6rem 1.25rem;
+    border-radius: 0.375rem;
     font-size: 0.92rem;
     font-weight: 500;
     text-decoration: none;
@@ -882,29 +844,10 @@ select option {
 .btn-volver-recursos:hover {
     background: #4a80f0;
     border-color: #4a80f0;
-    transform: translateY(-2px);
+    transform: translateY(-0.125rem);
 }
-.credo-versificado {
-    font-family: inherit; /* Hereda la misma fuente de tu página */
-    font-size: 0.95rem;
-    color: #e2e8f0;
-    line-height: 1.6;
-    white-space: pre-wrap; /* Permite que el texto baje de línea si la pantalla es muy pequeña */
-    background: transparent; /* Sin fondos raros */
-    border: none;
-    padding: 0;
-    margin: 0;
-}
-.credo-versificado-resp {
-    white-space: pre-wrap;
-    word-wrap: break-word;
-}
-.credo-parrafos p {
-    margin-bottom: 1rem;
-    line-height: 1.6;
-    text-align: left;
-}
-/* --- ESTILOS EXCLUSIVOS PARA LA PÁGINA DEL CATECISMOS DE HEIDELBERG --- */
+
+/* --- Catecismo de Heidelberg Layout --- */
 body.page-heidelberg {
     height: 100vh;
     overflow: hidden !important;
@@ -924,12 +867,12 @@ body.page-heidelberg .heidelberg-layout {
     display: flex;
     flex: 1;
     width: 100%;
-    height: calc(100vh - 60px); /* Resta la altura del navbar */
+    height: calc(100vh - 3.75rem);
     overflow: hidden;
 }
 
 body.page-heidelberg .heidelberg-aside {
-    width: 320px;
+    width: 20rem;
     background-color: #181a26;
     border-right: 1px solid #2d3248;
     display: flex;
@@ -940,7 +883,7 @@ body.page-heidelberg .heidelberg-aside {
 }
 
 body.page-heidelberg .heidelberg-sidebar-header {
-    padding: 20px;
+    padding: 1.25rem;
     background-color: #11131c;
     border-bottom: 1px solid #2d3248;
     text-align: center;
@@ -954,15 +897,15 @@ body.page-heidelberg .heidelberg-sidebar-header h2 {
 }
 
 body.page-heidelberg .heidelberg-search-box {
-    padding: 15px;
+    padding: 0.9375rem;
     background: #181a26;
     flex-shrink: 0;
 }
 
 body.page-heidelberg .heidelberg-search-box input {
     width: 100%;
-    padding: 10px;
-    border-radius: 6px;
+    padding: 0.6rem;
+    border-radius: 0.375rem;
     border: 1px solid #2d3248;
     background: #252836;
     color: white;
@@ -971,18 +914,17 @@ body.page-heidelberg .heidelberg-search-box input {
     box-sizing: border-box;
 }
 
-/* Lista lateral con scroll vertical independiente */
 body.page-heidelberg .heidelberg-nav-list {
     list-style: none;
     padding: 0;
     margin: 0;
     flex: 1;
-    overflow-y: auto; /* Aquí habilitas el scroll exclusivamente para la lista */
+    overflow-y: auto;
     width: 100%;
 }
 
 body.page-heidelberg .heidelberg-nav-item {
-    padding: 14px 20px;
+    padding: 0.875rem 1.25rem;
     font-size: 0.92rem;
     border-bottom: 1px solid rgba(255, 255, 255, 0.04);
     cursor: pointer;
@@ -1004,60 +946,75 @@ body.page-heidelberg .heidelberg-nav-item.active {
 
 body.page-heidelberg .heidelberg-main {
     flex: 1;
-    padding: 30px 40px;
-    overflow-y: auto; /* Scroll independiente para el contenido del texto principal */
+    padding: 1.875rem 2.5rem;
+    overflow-y: auto;
     background-color: #181a26;
     height: 100%;
 }
+
 /* ==========================================================
-   --- ESTILOS RESPONSIVOS PARA MÓVILES (CATECISMO) ---
+   --- BLOQUE RESPONSIVO UNIFICADO (MEDIA QUERIES) ---
    ========================================================== */
-@media screen and (max-width: 768px) {
-    /* Forzar visibilidad del botón de hamburguesa en la barra superior en móviles */
-    body.page-heidelberg .navbar .menu-toggle,
-    body.page-heidelberg .navbar .mobile-menu-toggle {
-        display: block !important;
+
+/* 1. DISPOSITIVOS MÓVILES Y TABLETS (Pantallas de hasta 768px) */
+@media (max-width: 768px) {
+    /* El botón hamburguesa se muestra en móvil */
+    .menu-toggle,
+    .mobile-menu-toggle,
+    .hamburger-menu {
+        display: block !important; 
     }
 
-    /* Estilo del menú desplegable de la barra de navegación en móvil */
-    body.page-heidelberg .navbar .nav-links {
+    /* Los enlaces del menú se ocultan por defecto en móvil */
+    .nav-links {
         display: none !important;
         position: absolute;
-        top: 60px;
+        top: 3.75rem;
         left: 0;
         width: 100%;
-        background-color: #11131c;
+        background: rgba(15, 17, 23, 0.98);
         flex-direction: column;
-        padding: 20px;
-        gap: 15px;
+        padding: 1.25rem;
+        gap: 1.1rem;
         z-index: 9999;
-        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.8);
+        box-shadow: 0 0.625rem 1.56rem rgba(0, 0, 0, 0.8);
         border-bottom: 1px solid #2d3248;
-        max-height: calc(100vh - 60px);
+        max-height: calc(100vh - 3.75rem);
         overflow-y: auto;
         box-sizing: border-box;
     }
 
-    /* Mostrar los enlaces cuando el script active la clase .active */
-    body.page-heidelberg .navbar .nav-links.active {
+    /* JavaScript activa esta clase para desplegar el menú */
+    .nav-links.active {
         display: flex !important;
     }
 
-    /* Ajuste del layout principal del Catecismo en celulares */
+    /* Ajustes visuales para móviles */
+    .hero-content h1 {
+        font-size: 1.8rem !important;
+    }
+
+    .hero-content p {
+        font-size: 0.95rem !important;
+    }
+
+    .recurso-banner-content h1 {
+        font-size: 1.8rem !important;
+    }
+
+    /* Layout Catecismo en móvil */
     body.page-heidelberg .heidelberg-layout {
         position: relative;
         overflow: hidden;
-        height: calc(100vh - 60px);
+        height: calc(100vh - 3.75rem);
     }
 
-    /* Por defecto en celular, mostramos el aside ocupando todo */
     body.page-heidelberg .heidelberg-aside {
         width: 100% !important;
         height: 100%;
         display: flex;
     }
 
-    /* Ocultamos el main por defecto en celular hasta que elijan una opción */
     body.page-heidelberg .heidelberg-main {
         display: none;
         position: absolute;
@@ -1067,12 +1024,11 @@ body.page-heidelberg .heidelberg-main {
         height: 100%;
         z-index: 10;
         background-color: #181a26;
-        padding: 20px;
+        padding: 1.25rem;
         box-sizing: border-box;
         overflow-y: auto;
     }
 
-    /* Clase que activaremos por JS cuando el usuario haga clic en un tema en celular */
     body.page-heidelberg .heidelberg-layout.show-content .heidelberg-aside {
         display: none;
     }
@@ -1080,45 +1036,72 @@ body.page-heidelberg .heidelberg-main {
     body.page-heidelberg .heidelberg-layout.show-content .heidelberg-main {
         display: block;
     }
+}
 
-    /* Estilo para el botón de "Volver" en móvil */
+/* 2. COMPUTADORAS / PC (Pantallas mayores a 769px) */
+@media (min-width: 769px) {
+    .menu-toggle,
+    .mobile-menu-toggle,
+    .hamburger-menu {
+        display: none !important; /* El botón hamburguesa está oculto en PC */
+    }
+
+    .nav-links {
+        display: flex !important; /* La barra de navegación se muestra siempre en PC */
+        flex-direction: row;
+        align-items: center;
+    }
+}
+/* Por defecto, el botón de volver al menú está oculto en computadoras */
+.btn-back-mobile {
+    display: none !important;
+}
+
+/* Solo se muestra en dispositivos móviles (pantallas menores o iguales a 768px) */
+@media (max-width: 768px) {
     .btn-back-mobile {
-        display: inline-flex;
+        display: inline-flex !important;
         align-items: center;
         gap: 8px;
+        margin-bottom: 20px;
         background: #2d3248;
-        color: #ffffff;
+        color: #fff;
         border: none;
-        padding: 10px 16px;
+        padding: 8px 14px;
         border-radius: 6px;
         margin-bottom: 20px;
         cursor: pointer;
         font-size: 0.9rem;
     }
 }
-
-/* En pantallas grandes (PC), nos aseguramos que el menú hamburguesa y el botón de volver estén ocultos */
-@media screen and (min-width: 769px) {
-    body.page-heidelberg .navbar .menu-toggle,
-    body.page-heidelberg .navbar .mobile-menu-toggle {
-        display: none !important;
-    }
-
-    .btn-back-mobile {
-        display: none !important;
-    }
+/* 1. Mantenemos las líneas internas (creed-indent) más juntas y con un interlineado compacto */
+.creed-text .creed-indent {
+    display: block;
+    margin-left: 20px;
+    line-height: 2; /* Interlineado más compacto entre las líneas del mismo bloque */
+    margin-bottom: 4px; /* Pequeño respiro entre una línea y otra */
 }
-.creed-text {
-    color: #e2e8f0;
-    font-size: 1.05rem;
-    line-height: 1.8;
+.creed-text .creed-tittle {
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #4a80f0;
+    line-height: 3;
 }
-
+/* 2. Damos más separación entre los párrafos principales (separando "Creemos en Dios" de "Creemos en Jesús") */
 .creed-text p {
-    margin-bottom: 24px;
+    margin-bottom: 35px; /* Espacio generoso entre cada artículo del credo */
+    line-height: 1.4;
 }
 
-.creed-indent {
-    display: inline-block;
-    padding-left: 35px;
+/* Ajuste opcional para pantallas grandes en computadoras */
+@media (min-width: 769px) {
+    .creed-text .creed-indent {
+        margin-left: 40px;
+    }
+    .creed-text .creed-tittle {
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #4a80f0;
+    line-height: 3;
+}
 }

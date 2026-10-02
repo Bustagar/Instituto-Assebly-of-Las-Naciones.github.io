@@ -557,7 +557,20 @@ document.addEventListener('DOMContentLoaded', () => {
     const loginSpinner = document.getElementById('login-spinner');
     const menuBtn = document.getElementById('mobile-menu-btn');
     const navMenu = document.getElementById('nav-menu');
+// Control del menú hamburguesa en dispositivos móviles
+if (menuBtn && navMenu) {
+    menuBtn.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+    });
 
+    // Opcional: cierra el menú al hacer clic en cualquier enlace de navegación
+    const navLinks = navMenu.querySelectorAll('a');
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            navMenu.classList.remove('active');
+        });
+    });
+}
     const isAuthenticated = localStorage.getItem('user_authenticated') === 'true';
 
     // Manejo directo de sesión por archivo HTML
@@ -1846,5 +1859,15 @@ window.addEventListener('DOMContentLoaded', () => {
         }
     } else {
         console.error("No se encontró la variable catecismoData.");
+    }
+});
+document.addEventListener("DOMContentLoaded", () => {
+    const menuBtn = document.getElementById("mobile-menu-btn");
+    const navMenu = document.getElementById("nav-menu");
+
+    if (menuBtn && navMenu) {
+        menuBtn.addEventListener("click", () => {
+            navMenu.classList.toggle("active");
+        });
     }
 });
